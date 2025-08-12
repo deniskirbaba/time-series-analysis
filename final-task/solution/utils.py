@@ -48,22 +48,31 @@ def plot_item_features(df):
     plt.show()
 
 
-def plot_linear_trend(df, date_col="date", target_col="cnt"):
+def plot_linear_trend(df, date_col="date", target_col="cnt") -> LinearRegression:
     X = np.arange(len(df)).reshape(-1, 1)
     y = df[target_col].values
 
     lr = LinearRegression()
     lr.fit(X, y)
     trend = lr.predict(X)
+    slope = lr.coef_[0]
 
     plt.figure(figsize=(14, 5))
     plt.plot(df[date_col], y, label="Sales Count")
-    plt.plot(df[date_col], trend, label="Trend (Linear Regression)", color="red", linewidth=2)
+    plt.plot(
+        df[date_col],
+        trend,
+        label=f"Trend (Linear Regression)\nSlope: {slope:.4f}",
+        color="red",
+        linewidth=2,
+    )
     plt.title("Sales Count and Linear Trend")
     plt.xlabel("Date")
     plt.ylabel("Sales Count")
     plt.legend()
     plt.show()
+
+    return lr
 
 
 def test_trend(row):
