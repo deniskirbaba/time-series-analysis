@@ -2,7 +2,9 @@ adagio==0.2.6
 appdirs==1.4.4
 arviz==0.22.0
 asttokens==3.0.0
+black==25.1.0
 Bottleneck @ file:///croot/bottleneck_1731058641041/work
+click==8.2.1
 cloudpickle==3.1.1
 cmdstanpy==1.2.5
 comm==0.2.3
@@ -25,11 +27,13 @@ importlib_resources==6.5.2
 ipykernel==6.30.1
 ipython==9.4.0
 ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.7
 jedi==0.19.2
 Jinja2==3.1.6
 joblib==1.5.1
 jupyter_client==8.6.3
 jupyter_core==5.8.1
+jupyterlab_widgets==3.0.15
 kiwisolver==1.4.8
 llvmlite==0.44.0
 MarkupSafe==3.0.2
@@ -39,6 +43,7 @@ mkl-service==2.4.0
 mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
 mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
 mpmath==1.3.0
+mypy_extensions==1.1.0
 narwhals==2.0.1
 nest-asyncio==1.6.0
 networkx==3.5
@@ -64,6 +69,7 @@ orbit-ml==1.1.4.9
 packaging==25.0
 pandas @ file:///croot/pandas_1752846035684/work/dist/pandas-2.3.1-cp312-cp312-linux_x86_64.whl#sha256=fcabae92c246e264022b989e2b79e3d3e8d71f617efbdc9ccee4d0e9bbdf264f
 parso==0.8.4
+pathspec==0.12.1
 patsy==1.0.1
 pexpect==4.9.0
 pillow==11.3.0
@@ -109,5 +115,6 @@ urllib3==2.5.0
 utilsforecast==0.2.12
 wcwidth==0.2.13
 wheel==0.45.1
+widgetsnbextension==4.0.14
 xarray==2025.7.1
 xarray-einstats==0.9.1
