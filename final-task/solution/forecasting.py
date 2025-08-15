@@ -98,6 +98,8 @@ class SalesForecaster:
             param_grid=param_grid,
             scoring=MeanAbsolutePercentageError(symmetric=True),
             verbose=3,
+            backend="loky",
+            backend_params={"n_jobs": -1},
         )
         gscv.fit(train_val.cnt)
 

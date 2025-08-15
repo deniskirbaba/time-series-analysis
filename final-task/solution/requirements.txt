@@ -12,6 +12,7 @@ contourpy==1.3.3
 coreforecast==0.0.16
 cycler==0.12.1
 Cython==3.1.2
+dask==2025.7.0
 debugpy==1.8.15
 decorator==5.2.1
 executing==2.2.0
@@ -36,6 +37,7 @@ jupyter_core==5.8.1
 jupyterlab_widgets==3.0.15
 kiwisolver==1.4.8
 llvmlite==0.44.0
+locket==1.0.0
 MarkupSafe==3.0.2
 matplotlib==3.10.5
 matplotlib-inline==0.1.7
@@ -69,6 +71,7 @@ orbit-ml==1.1.4.9
 packaging==25.0
 pandas @ file:///croot/pandas_1752846035684/work/dist/pandas-2.3.1-cp312-cp312-linux_x86_64.whl#sha256=fcabae92c246e264022b989e2b79e3d3e8d71f617efbdc9ccee4d0e9bbdf264f
 parso==0.8.4
+partd==1.4.2
 pathspec==0.12.1
 patsy==1.0.1
 pexpect==4.9.0
@@ -88,6 +91,7 @@ pyro-api==0.1.2
 pyro-ppl==1.9.1
 python-dateutil @ file:///croot/python-dateutil_1716495738603/work
 pytz @ file:///croot/pytz_1752135852232/work
+PyYAML==6.0.2
 pyzmq==27.0.1
 scikit-base==0.12.4
 scikit-learn==1.7.1
@@ -103,6 +107,7 @@ statsmodels==0.14.5
 sympy==1.14.0
 tbats==1.1.3
 threadpoolctl==3.6.0
+toolz==1.0.0
 torch==2.8.0
 tornado==6.5.1
 tqdm @ file:///croot/tqdm_1738943501192/work
