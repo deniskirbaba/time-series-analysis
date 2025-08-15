@@ -97,7 +97,7 @@ class SalesForecaster:
             cv=cv,
             param_grid=param_grid,
             scoring=MeanAbsolutePercentageError(symmetric=True),
-            verbose=3,
+            verbose=1,
             backend="loky",
             backend_params={"n_jobs": -1},
         )
