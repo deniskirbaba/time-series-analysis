@@ -1,10 +1,23 @@
 import json
 from pathlib import Path
 
+import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from statsmodels.tsa.stattools import adfuller, kpss
+from tqdm.auto import tqdm
+
+
+class ProgressParallel(joblib.Parallel):
+    def __call__(self, *args, **kwargs):
+        with tqdm() as self._pbar:
+            return joblib.Parallel.__call__(self, *args, **kwargs)
+
+    def print_progress(self):
+        self._pbar.total = self.n_dispatched_tasks
+        self._pbar.n = self.n_completed_tasks
+        self._pbar.refresh()
 
 
 def pretty_info(df, name):

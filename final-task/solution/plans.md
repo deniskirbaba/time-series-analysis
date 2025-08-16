@@ -1,8 +1,7 @@
 current todo:
-- sarima - дообучить, анализ (обучать кастомной?)
+- sarima - дообучить, анализ
 - sarimax - 
     1. изменить функции, чтобы можно было прокидывать exogenous. forecast_and_evaluate 
-    2. обучить на кастомной?
 
 future todo:
 

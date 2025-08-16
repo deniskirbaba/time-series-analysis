@@ -4,6 +4,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
+from joblib import Parallel, delayed
 from sklearn.metrics import r2_score
 from sktime.forecasting.model_selection import (
     ForecastingGridSearchCV,
@@ -15,6 +16,7 @@ from sktime.performance_metrics.forecasting import (
 )
 from sktime.transformations.series.boxcox import BoxCoxTransformer
 from tqdm.auto import tqdm
+from utils import ProgressParallel
 
 
 class SalesForecaster:
@@ -142,6 +144,7 @@ class SalesForecaster:
         Custom grid search for forecaster with error skipping.
 
         Tries all parameter combinations, skips those that fail on fit.
+        Parallelized using joblib (loky backend).
         Uses SMAPE as the scoring metric.
         Returns: best_params, best_score, best_forecaster, all_results (list of dicts)
         """
@@ -157,38 +160,44 @@ class SalesForecaster:
 
         param_names = list(param_grid.keys())
         param_values = list(param_grid.values())
-        all_results = []
-        best_score = np.inf
-        best_params = None
-        best_forecaster = None
-
         param_combinations = list(product(*param_values))
-        for param_tuple in tqdm(param_combinations, desc="Grid Search"):
+
+        def evaluate_params(param_tuple):
             params = dict(zip(param_names, param_tuple))
             try:
-                forecaster = forecaster.set_params(**params)
+                local_forecaster = forecaster.set_params(**params)
                 scores = []
-                for train_idx, test_idx in tqdm(cv.split(train_val), desc="Cross-Validation"):
+                for train_idx, test_idx in cv.split(train_val):
                     y_train = train_val.cnt.iloc[train_idx]
                     y_test = train_val.cnt.iloc[test_idx]
                     X_train = train_val[exog_cols].iloc[train_idx] if exog_cols else None
                     X_test = train_val[exog_cols].iloc[test_idx] if exog_cols else None
 
-                    forecaster_clone = forecaster.clone()
+                    forecaster_clone = local_forecaster.clone()
                     forecaster_clone.fit(y=y_train, X=X_train)
                     y_pred = forecaster_clone.predict(fh=np.arange(1, len(y_test) + 1), X=X_test)
                     smape = MeanAbsolutePercentageError(symmetric=True)(y_test, y_pred)
                     scores.append(smape)
                 if scores:
                     mean_score = np.mean(scores)
-                    all_results.append({"params": params, "score": mean_score})
-                    if mean_score < best_score:
-                        best_score = mean_score
-                        best_params = params
+                    return {"params": params, "score": mean_score}
             except Exception:
                 print(f"Skipping params {params} due to error.")
-                continue
+            return None
 
+        results = ProgressParallel(n_jobs=-1, backend="loky")(
+            delayed(evaluate_params)(param_tuple) for param_tuple in param_combinations
+        )
+
+        all_results = [r for r in results if r is not None]
+        best_score = np.inf
+        best_params = None
+        for res in all_results:
+            if res["score"] < best_score:
+                best_score = res["score"]
+                best_params = res["params"]
+
+        best_forecaster = None
         # Fit best forecaster on last 2 years
         if best_params is not None:
             last_2_years = train_val.tail(365 * 2)
