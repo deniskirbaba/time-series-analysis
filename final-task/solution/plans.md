@@ -1,5 +1,8 @@
 current todo:
-
+- sarima - дообучить, анализ (обучать кастомной?)
+- sarimax - 
+    1. изменить функции, чтобы можно было прокидывать exogenous. forecast_and_evaluate 
+    2. обучить на кастомной?
 
 future todo:
 
@@ -25,3 +28,4 @@ dates.csv
     * номер месяца (1-12)
     * два праздника: тип праздника (4 категории + нет праздника) - one-hot?
     * CASHBACK_STORE_1 (0 или 1)
+    * sell_price

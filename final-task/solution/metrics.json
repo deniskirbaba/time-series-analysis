@@ -389,6 +389,186 @@
                     "R2": -0.9450801882132536
                 }
             }
+        },
+        "sarima": {
+            "STORE_1_064": {
+                "best_params": "order=(0, 1, 0), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 1.005540166204987,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 7.218338780950063,
+                    "SMAPE": 0.9210650524836966,
+                    "R2": -0.4722739074617254
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "order=(0, 1, 0), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 1.0,
+                    "SMAPE": 0.8723656131466431,
+                    "R2": -0.29452054794520555
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "order=(3, 1, 2), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 20.137843950152057,
+                    "SMAPE": 0.33390230054767234,
+                    "R2": 0.3540265678951334
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "order=(4, 1, 1), seasonal_order=(0, 1, 2, 7)",
+                "metrics": {
+                    "MAE": 10.327325940706455,
+                    "SMAPE": 0.5532838075455704,
+                    "R2": -2.4161940008528124
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "order=(4, 1, 1), seasonal_order=(6, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 3.620983847686813,
+                    "SMAPE": 0.8457735411785976,
+                    "R2": -0.004681556405742304
+                }
+            }
+        },
+        "ema": {
+            "STORE_1_064": {
+                "best_params": "damped_trend=False, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 1.0674308563008474,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 1.3493877959177625,
+                    "SMAPE": 1.6243696089329447,
+                    "R2": -0.0026100178265715535
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 22.808563013060205,
+                    "SMAPE": 0.3807657803829055,
+                    "R2": 0.22957250396980966
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 7.768999692944277,
+                    "SMAPE": 0.4563485217415511,
+                    "R2": -1.0944908429141962
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "damped_trend=True, seasonal=add, trend=mul",
+                "metrics": {
+                    "MAE": 3.587103906253755,
+                    "SMAPE": 0.9127326552918574,
+                    "R2": 0.1225505311689632
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "damped_trend=False, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 1.3248457979969335,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 1.0429689368653234,
+                    "SMAPE": 1.55217331613176,
+                    "R2": -1.243411120516035
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 2.719496436157835,
+                    "SMAPE": 0.7888268187231388,
+                    "R2": 0.3303050556000141
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 3.1685389341439962,
+                    "SMAPE": 0.5813832541552272,
+                    "R2": -0.3040993788562376
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 6.141110892553608,
+                    "SMAPE": 0.3596113857278637,
+                    "R2": -0.06473129928260235
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 1.2992545587089046,
+                    "SMAPE": 1.4176252447105786,
+                    "R2": -6.391067231511802
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 11.779353367610062,
+                    "SMAPE": 0.41352752451878916,
+                    "R2": -0.730846338133049
+                }
+            },
+            "STORE_1_587": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 6.511205699930398,
+                    "SMAPE": 0.2579657143598725,
+                    "R2": 0.3752183156220803
+                }
+            },
+            "STORE_1_714": {
+                "best_params": "damped_trend=False, seasonal=add, trend=mul",
+                "metrics": {
+                    "MAE": 5.519606065311818,
+                    "SMAPE": 0.2521214168244336,
+                    "R2": -1.0823950164222667
+                }
+            },
+            "STORE_1_727": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 0.8692018929354199,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 5.13047118977941,
+                    "SMAPE": 0.9998300827667281,
+                    "R2": -0.6570669892734595
+                }
+            }
         }
     },
     "30": {
@@ -779,6 +959,186 @@
                     "MAE": 6.24089497716895,
                     "SMAPE": 0.6446296617937136,
                     "R2": -0.32841594712077427
+                }
+            }
+        },
+        "sarima": {
+            "STORE_1_064": {
+                "best_params": "order=(4, 1, 0), seasonal_order=(5, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 0.31284789745059477,
+                    "SMAPE": 2.0,
+                    "R2": -1.9248479243421697
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "order=(0, 1, 0), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 0.5333333333333333,
+                    "SMAPE": 0.8165153042026501,
+                    "R2": -0.32352941176470607
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "order=(1, 1, 2), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 15.769960994619039,
+                    "SMAPE": 0.23192479532590016,
+                    "R2": 0.45774794653304585
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "order=(5, 1, 1), seasonal_order=(0, 1, 1, 7)",
+                "metrics": {
+                    "MAE": 9.223085993433036,
+                    "SMAPE": 0.4588886594671436,
+                    "R2": -1.268666435030274
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 5.836057355331658,
+                    "SMAPE": 0.8438887310421173,
+                    "R2": -0.6497240876588115
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "order=(5, 1, 1), seasonal_order=(7, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 3.3410585578222833,
+                    "SMAPE": 0.7121148962148922,
+                    "R2": -0.1893246136899538
+                }
+            }
+        },
+        "ema": {
+            "STORE_1_064": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 1.000164680229872,
+                    "SMAPE": 1.8703232956340405,
+                    "R2": -16.115437341003894
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 0.9313702108891435,
+                    "SMAPE": 1.5266356399035792,
+                    "R2": -0.4832455618932934
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 19.453848288204746,
+                    "SMAPE": 0.2829302797092957,
+                    "R2": 0.17741586868657466
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 7.016208492959111,
+                    "SMAPE": 0.37183339886669253,
+                    "R2": -0.38749320720785674
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 3.229865673836666,
+                    "SMAPE": 0.7386061829452506,
+                    "R2": 0.040673017928603894
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 2.0918506612269843,
+                    "SMAPE": 1.4488615117571517,
+                    "R2": -0.03225714162466087
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 1.0233184770025672,
+                    "SMAPE": 1.4052883642779825,
+                    "R2": -0.3198240170837394
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "damped_trend=False, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 1.820540521941016,
+                    "SMAPE": 0.5499965654856123,
+                    "R2": 0.2806299269561223
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 8.437959890109035,
+                    "SMAPE": 1.0548400864594598,
+                    "R2": -0.19590179273221064
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 5.276388556099414,
+                    "SMAPE": 0.2459753721544487,
+                    "R2": 0.10892642381676376
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "damped_trend=False, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 1.3655387157715084,
+                    "SMAPE": 1.0888564908509752,
+                    "R2": -0.06268733301185359
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 7.696659748971524,
+                    "SMAPE": 0.24128755793816004,
+                    "R2": -0.046352120395549035
+                }
+            },
+            "STORE_1_587": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 6.018208607751182,
+                    "SMAPE": 0.19744296030706676,
+                    "R2": 0.3753097384458495
+                }
+            },
+            "STORE_1_714": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 4.938255574237226,
+                    "SMAPE": 0.20584893587931988,
+                    "R2": -0.5999543355414274
+                }
+            },
+            "STORE_1_727": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 4.448125252357228,
+                    "SMAPE": 1.5925406442278593,
+                    "R2": -0.41029638356658094
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 4.983220223439148,
+                    "SMAPE": 0.8547511524264597,
+                    "R2": -1.1780329505484768
                 }
             }
         }
@@ -1173,6 +1533,137 @@
                     "R2": -0.14098614908519014
                 }
             }
-        }
+        },
+        "ema": {
+            "STORE_1_064": {
+                "best_params": "damped_trend=False, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 0.9559453858727464,
+                    "SMAPE": 1.7443193271551845,
+                    "R2": -3.4889543144233066
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 0.9555969722272664,
+                    "SMAPE": 1.4291201123157171,
+                    "R2": -0.17356939574245156
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 31.746042356125585,
+                    "SMAPE": 0.8133746748997147,
+                    "R2": 0.13849376567606553
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 8.877925762313396,
+                    "SMAPE": 0.5074203529871846,
+                    "R2": -0.8314075432636492
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "damped_trend=True, seasonal=add, trend=mul",
+                "metrics": {
+                    "MAE": 3.3973717634535774,
+                    "SMAPE": 0.7375407663019448,
+                    "R2": 0.02492573923861452
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "damped_trend=True, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 2.481434888315891,
+                    "SMAPE": 1.1467795873515578,
+                    "R2": -0.40916838588621074
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 1.1146058008174635,
+                    "SMAPE": 1.579697671483448,
+                    "R2": -0.45444132157466144
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 2.2769691672026378,
+                    "SMAPE": 0.6681182498475711,
+                    "R2": -0.5036691267917699
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 10.071112913983123,
+                    "SMAPE": 1.016137925840611,
+                    "R2": -0.2716848438360575
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 6.073388872064421,
+                    "SMAPE": 0.2774953270632057,
+                    "R2": 0.10891827796789477
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "damped_trend=False, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 1.4341346193879263,
+                    "SMAPE": 1.076900197615095,
+                    "R2": 0.05806515675946122
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "damped_trend=False, seasonal=add, trend=add",
+                "metrics": {
+                    "MAE": 8.784600085743916,
+                    "SMAPE": 0.278113654635731,
+                    "R2": -0.07181872282758262
+                }
+            },
+            "STORE_1_587": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=mul",
+                "metrics": {
+                    "MAE": 6.882025034955806,
+                    "SMAPE": 0.23678274892527879,
+                    "R2": 0.09997242587631527
+                }
+            },
+            "STORE_1_714": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 6.41117259488196,
+                    "SMAPE": 0.3079080828085228,
+                    "R2": -0.38059730590275764
+                }
+            },
+            "STORE_1_727": {
+                "best_params": "damped_trend=True, seasonal=mul, trend=add",
+                "metrics": {
+                    "MAE": 3.4712669381391854,
+                    "SMAPE": 1.2847499803183031,
+                    "R2": -0.5190123907095523
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 6.32890621036566,
+                    "SMAPE": 0.8736305773032712,
+                    "R2": -0.44492986569597653
+                }
+            }
+        },
+        "sarima": {}
     }
 }
