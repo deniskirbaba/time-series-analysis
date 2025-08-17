@@ -402,9 +402,9 @@
             "AVERAGE": {
                 "best_params": "",
                 "metrics": {
-                    "MAE": 7.218338780950063,
-                    "SMAPE": 0.9210650524836966,
-                    "R2": -0.4722739074617254
+                    "MAE": 5.7600345186306185,
+                    "SMAPE": 1.120221157614181,
+                    "R2": -1.204892252046734
                 }
             },
             "STORE_1_065": {
@@ -437,6 +437,62 @@
                     "MAE": 3.620983847686813,
                     "SMAPE": 0.8457735411785976,
                     "R2": -0.004681556405742304
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(4, 1, 2, 7)",
+                "metrics": {
+                    "MAE": 0.42619970043106076,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "order=(0, 1, 1), seasonal_order=(7, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 0.556402090656026,
+                    "SMAPE": 1.7858009668903343,
+                    "R2": 0.14653419285083047
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "order=(0, 1, 0), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 4.4728927582113185,
+                    "SMAPE": 0.964289113652124,
+                    "R2": -0.4768661480318743
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 7.609416918369042,
+                    "SMAPE": 1.2883358770462674,
+                    "R2": -5.246480128186533
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(0, 1, 6, 7)",
+                "metrics": {
+                    "MAE": 7.332873471927309,
+                    "SMAPE": 0.41051327134782606,
+                    "R2": -0.3885568687842136
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "order=(6, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 1.0969354711379848,
+                    "SMAPE": 1.9811684535176413,
+                    "R2": -5.318377082569975
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "order=(0, 1, 3), seasonal_order=(0, 1, 7, 7)",
+                "metrics": {
+                    "MAE": 11.533999908084366,
+                    "SMAPE": 0.40722094649749424,
+                    "R2": -0.8135914525304162
                 }
             }
         },
@@ -567,6 +623,136 @@
                     "MAE": 5.13047118977941,
                     "SMAPE": 0.9998300827667281,
                     "R2": -0.6570669892734595
+                }
+            }
+        },
+        "prophet": {
+            "STORE_1_064": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 0.29755411245406665,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=100, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 1.047335127540087,
+                    "SMAPE": 1.7193157622824968,
+                    "R2": -0.056679477419518065
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 20.030205220579145,
+                    "SMAPE": 0.31698108426326904,
+                    "R2": 0.320467930568186
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 8.75975603813305,
+                    "SMAPE": 0.49816667677528426,
+                    "R2": -1.6935982247890613
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=10, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 3.4839887993553695,
+                    "SMAPE": 0.9417931613769482,
+                    "R2": 0.1835201782158321
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=100, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 1.862431116892252,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=10, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 0.7117656956581867,
+                    "SMAPE": 1.6124182765795527,
+                    "R2": -0.22857092889433406
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=10, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 3.4046852278866586,
+                    "SMAPE": 1.3610580432396273,
+                    "R2": -0.17338642635646595
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=10, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 10.6890041447328,
+                    "SMAPE": 0.9856944364964839,
+                    "R2": -9.172886465644678
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=25, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 6.2631618800815625,
+                    "SMAPE": 0.3629504022154558,
+                    "R2": 0.23126351349504348
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=50, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 0.9747665554854491,
+                    "SMAPE": 1.3461820215489912,
+                    "R2": -3.354515336279639
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=50, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 9.104441392984167,
+                    "SMAPE": 0.34443588224889765,
+                    "R2": -0.18777999567460668
+                }
+            },
+            "STORE_1_587": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 5.2559117474206625,
+                    "SMAPE": 0.20334831199102793,
+                    "R2": 0.4734268777707239
+                }
+            },
+            "STORE_1_714": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=50, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 8.914651451717454,
+                    "SMAPE": 0.3712443046884911,
+                    "R2": -4.188453070526427
+                }
+            },
+            "STORE_1_727": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=100, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 3.417013953068158,
+                    "SMAPE": 2.0,
+                    "R2": 0.0
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 5.614444830932606,
+                    "SMAPE": 1.070905890913768,
+                    "R2": -1.1898127617023297
                 }
             }
         }
@@ -998,9 +1184,9 @@
             "AVERAGE": {
                 "best_params": "",
                 "metrics": {
-                    "MAE": 5.836057355331658,
-                    "SMAPE": 0.8438887310421173,
-                    "R2": -0.6497240876588115
+                    "MAE": 4.778898275956009,
+                    "SMAPE": 1.0747826829450533,
+                    "R2": -0.5462778346529279
                 }
             },
             "STORE_1_325": {
@@ -1009,6 +1195,54 @@
                     "MAE": 3.3410585578222833,
                     "SMAPE": 0.7121148962148922,
                     "R2": -0.1893246136899538
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "order=(0, 1, 1), seasonal_order=(4, 1, 2, 7)",
+                "metrics": {
+                    "MAE": 2.61015425884579,
+                    "SMAPE": 1.982656066285709,
+                    "R2": -0.8227508071696641
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(7, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 0.706965715917771,
+                    "SMAPE": 1.7243521193210616,
+                    "R2": -0.0524997870182593
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 2.887399065067541,
+                    "SMAPE": 0.6757413008711967,
+                    "R2": -0.5620427565238517
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 10.115853325755058,
+                    "SMAPE": 1.431098149134681,
+                    "R2": -0.49714052884279925
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "order=(3, 1, 1), seasonal_order=(0, 1, 7, 7)",
+                "metrics": {
+                    "MAE": 5.369975784678682,
+                    "SMAPE": 0.25006703553835724,
+                    "R2": 0.12463897314025385
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "order=(4, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 1.6972461085929742,
+                    "SMAPE": 1.5392511860339926,
+                    "R2": -0.9506408364738292
                 }
             }
         },
@@ -1139,6 +1373,136 @@
                     "MAE": 4.983220223439148,
                     "SMAPE": 0.8547511524264597,
                     "R2": -1.1780329505484768
+                }
+            }
+        },
+        "prophet": {
+            "STORE_1_064": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=100, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 0.3448599704035129,
+                    "SMAPE": 1.9727597442656155,
+                    "R2": -1.4346021293682414
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=50, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 0.6056941265286698,
+                    "SMAPE": 1.6288740865473854,
+                    "R2": -0.018562886455119054
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=10, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 16.785297175301647,
+                    "SMAPE": 0.23458807523758304,
+                    "R2": 0.3376892593983698
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 8.938154608461435,
+                    "SMAPE": 0.43284458169826484,
+                    "R2": -1.3360210937559884
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 3.1954640983258207,
+                    "SMAPE": 0.7297211441523809,
+                    "R2": 0.053895880410185115
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=50, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 2.2272706892035967,
+                    "SMAPE": 1.4204820589021374,
+                    "R2": -0.061792886105339395
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=25, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 0.7827531572754542,
+                    "SMAPE": 1.5062599122150646,
+                    "R2": -0.17243208790046904
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=10, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 2.3557239732788795,
+                    "SMAPE": 0.791499415293332,
+                    "R2": -0.281550722660441
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=50, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 9.896061595951492,
+                    "SMAPE": 0.9001454739724567,
+                    "R2": -0.421022223359385
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=25, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 5.753572501718512,
+                    "SMAPE": 0.2680356323295369,
+                    "R2": 0.03267091702711633
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=10, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 1.2487595364755097,
+                    "SMAPE": 1.1060224860479086,
+                    "R2": -0.014503894524027228
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 6.916970215193148,
+                    "SMAPE": 0.22028195368039777,
+                    "R2": 0.18102370066002127
+                }
+            },
+            "STORE_1_587": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 6.233702472456126,
+                    "SMAPE": 0.20492010930245846,
+                    "R2": 0.30739172958338945
+                }
+            },
+            "STORE_1_714": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=100, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 6.770852487770987,
+                    "SMAPE": 0.26825071346454316,
+                    "R2": -1.6313498534810331
+                }
+            },
+            "STORE_1_727": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 4.041976400256749,
+                    "SMAPE": 1.1461961599682595,
+                    "R2": -0.04633481681046003
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 5.0731408672401015,
+                    "SMAPE": 0.8553921031384882,
+                    "R2": -0.3003667404894281
                 }
             }
         }
@@ -1664,6 +2028,241 @@
                 }
             }
         },
-        "sarima": {}
+        "sarima": {
+            "STORE_1_064": {
+                "best_params": "order=(0, 1, 0), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 9.773511080332431,
+                    "SMAPE": 2.0,
+                    "R2": -548.5535268242205
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "order=(3, 1, 1), seasonal_order=(7, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 0.7969025459512223,
+                    "SMAPE": 1.9188066339554704,
+                    "R2": -0.458682288508353
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 47.443481867130906,
+                    "SMAPE": 0.807706473702558,
+                    "R2": -1.0886130864051236
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "order=(6, 1, 1), seasonal_order=(0, 1, 1, 7)",
+                "metrics": {
+                    "MAE": 13.801072937136489,
+                    "SMAPE": 0.6669900882911441,
+                    "R2": -3.1430137883447555
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "order=(5, 1, 1), seasonal_order=(7, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 3.5716161797957593,
+                    "SMAPE": 0.7428105044814391,
+                    "R2": -0.04579031564655067
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(5, 1, 5, 7)",
+                "metrics": {
+                    "MAE": 4.459472758981732,
+                    "SMAPE": 1.9866189046268767,
+                    "R2": -2.634555402662752
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "order=(0, 1, 1), seasonal_order=(7, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 0.6677300648835608,
+                    "SMAPE": 1.8122358233644913,
+                    "R2": -0.015872697330962193
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "order=(3, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 4.986810724688128,
+                    "SMAPE": 0.9368397671998001,
+                    "R2": -5.410176996652355
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "order=(5, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 13.588989767084323,
+                    "SMAPE": 1.5188063831738468,
+                    "R2": -1.156708426304455
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "order=(4, 1, 1), seasonal_order=(0, 1, 2, 7)",
+                "metrics": {
+                    "MAE": 6.249336859394176,
+                    "SMAPE": 0.28121872544227755,
+                    "R2": 0.06973586664286435
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "order=(1, 1, 1), seasonal_order=(0, 1, 0, 7)",
+                "metrics": {
+                    "MAE": 1.756659250117957,
+                    "SMAPE": 1.6010905153784085,
+                    "R2": -0.515616116309471
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "order=(1, 1, 3), seasonal_order=(0, 1, 2, 7)",
+                "metrics": {
+                    "MAE": 12.145690875047624,
+                    "SMAPE": 0.35350060454539417,
+                    "R2": -0.843750501683437
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 9.936772909212026,
+                    "SMAPE": 1.2188853686801422,
+                    "R2": -46.983047548118826
+                }
+            }
+        },
+        "prophet": {
+            "STORE_1_064": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=100, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 0.3680599475292968,
+                    "SMAPE": 1.8679336781344054,
+                    "R2": -0.03952170289670964
+                }
+            },
+            "STORE_1_065": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=100, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 0.7670700018468802,
+                    "SMAPE": 1.6003583790939373,
+                    "R2": -0.023573558703634978
+                }
+            },
+            "STORE_1_090": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=50, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 33.33335214137471,
+                    "SMAPE": 0.7491133152619972,
+                    "R2": -0.12188002719741386
+                }
+            },
+            "STORE_1_252": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=10, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 11.970377931390633,
+                    "SMAPE": 0.615611528955449,
+                    "R2": -2.1467506896403235
+                }
+            },
+            "STORE_1_325": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=100, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 3.3685544642891405,
+                    "SMAPE": 0.7243779061509492,
+                    "R2": 0.04677633499082268
+                }
+            },
+            "STORE_1_339": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 2.2648162982504885,
+                    "SMAPE": 0.948931509018564,
+                    "R2": -0.1369857523451794
+                }
+            },
+            "STORE_1_376": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=25, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 0.8044392304631515,
+                    "SMAPE": 1.6559915315417386,
+                    "R2": -0.01582719392476739
+                }
+            },
+            "STORE_1_546": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 1.8307163095439616,
+                    "SMAPE": 0.7141181871531664,
+                    "R2": -0.068087674717624
+                }
+            },
+            "STORE_1_547": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=100, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 10.57674338229158,
+                    "SMAPE": 0.8295339113722712,
+                    "R2": -0.17827172932970048
+                }
+            },
+            "STORE_1_555": {
+                "best_params": "add_country_holidays=None, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=25, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 6.520840750366276,
+                    "SMAPE": 0.3028430227966348,
+                    "R2": -0.021930981224241863
+                }
+            },
+            "STORE_1_584": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=50, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 1.3001719586357263,
+                    "SMAPE": 1.068540190723427,
+                    "R2": 0.04373121687849735
+                }
+            },
+            "STORE_1_586": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality={'name': 'monthly', 'period': 30.5, 'fourier_order': 5}, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 8.26830260263008,
+                    "SMAPE": 0.27164061264404366,
+                    "R2": 0.10929375903268812
+                }
+            },
+            "STORE_1_587": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 6.952302409230517,
+                    "SMAPE": 0.23667805856814902,
+                    "R2": 0.057375714942499045
+                }
+            },
+            "STORE_1_714": {
+                "best_params": "add_country_holidays={'country_name': 'US'}, add_seasonality=None, n_changepoints=5, seasonality_mode=multiplicative",
+                "metrics": {
+                    "MAE": 9.117295488803402,
+                    "SMAPE": 0.40184560311230716,
+                    "R2": -1.5063786227592373
+                }
+            },
+            "STORE_1_727": {
+                "best_params": "add_country_holidays=None, add_seasonality=None, n_changepoints=5, seasonality_mode=additive",
+                "metrics": {
+                    "MAE": 2.8057534834255002,
+                    "SMAPE": 0.8537624881203223,
+                    "R2": 0.003833804181477496
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "MAE": 6.683253093338091,
+                    "SMAPE": 0.8560853281764907,
+                    "R2": -0.2665464735141898
+                }
+            }
+        }
     }
 }

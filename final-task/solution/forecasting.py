@@ -181,8 +181,8 @@ class SalesForecaster:
                 if scores:
                     mean_score = np.mean(scores)
                     return {"params": params, "score": mean_score}
-            except Exception:
-                print(f"Skipping params {params} due to error.")
+            except Exception as e:
+                print(f"Skipping params {params} due to error: {str(e)}")
             return None
 
         results = ProgressParallel(n_jobs=-1, backend="loky")(
@@ -207,11 +207,11 @@ class SalesForecaster:
 
         return (best_params, best_score, all_results), best_forecaster
 
-    def forecast(self, forecaster, fh: int) -> pd.Series:
+    def forecast(self, forecaster, fh: int, exog: None | pd.DataFrame) -> pd.Series:
         """
         Forecast the sales using the fitted forecaster for given forecasting horizon.
         """
-        forecast = forecaster.predict(fh=np.arange(1, fh + 1))
+        forecast = forecaster.predict(fh=np.arange(1, fh + 1), X=exog)
         return forecast
 
     def calculate_metrics(self, forecast: pd.Series, gt: pd.Series) -> dict[str, float]:
