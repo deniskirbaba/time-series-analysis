@@ -1,9 +1,13 @@
+absl-py==2.3.1
 adagio==0.2.6
 appdirs==1.4.4
 arviz==0.22.0
 asttokens==3.0.0
+astunparse==1.6.3
 black==25.1.0
 Bottleneck @ file:///croot/bottleneck_1731058641041/work
+certifi==2025.8.3
+charset-normalizer==3.4.3
 click==8.2.1
 cloudpickle==3.1.1
 cmdstanpy==1.2.5
@@ -17,13 +21,18 @@ debugpy==1.8.15
 decorator==5.2.1
 executing==2.2.0
 filelock==3.18.0
+flatbuffers==25.2.10
 fonttools==4.59.0
 fs==2.4.16
 fsspec==2025.7.0
 fugue==0.9.1
+gast==0.6.0
+google-pasta==0.2.0
+grpcio==1.74.0
 h5netcdf==1.6.4
 h5py==3.14.0
 holidays==0.78
+idna==3.10
 importlib_resources==6.5.2
 ipykernel==6.30.1
 ipython==9.4.0
@@ -35,17 +44,25 @@ joblib==1.5.1
 jupyter_client==8.6.3
 jupyter_core==5.8.1
 jupyterlab_widgets==3.0.15
+keras==3.11.2
 kiwisolver==1.4.8
+libclang==18.1.1
+lightgbm==4.6.0
 llvmlite==0.44.0
 locket==1.0.0
+Markdown==3.8.2
+markdown-it-py==4.0.0
 MarkupSafe==3.0.2
 matplotlib==3.10.5
 matplotlib-inline==0.1.7
+mdurl==0.1.2
 mkl-service==2.4.0
 mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
 mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
+ml_dtypes==0.5.3
 mpmath==1.3.0
 mypy_extensions==1.1.0
+namex==0.1.0
 narwhals==2.0.1
 nest-asyncio==1.6.0
 networkx==3.5
@@ -67,6 +84,7 @@ nvidia-nccl-cu12==2.27.3
 nvidia-nvjitlink-cu12==12.8.93
 nvidia-nvtx-cu12==12.8.90
 opt_einsum==3.4.0
+optree==0.17.0
 orbit-ml==1.1.4.9
 packaging==25.0
 pandas @ file:///croot/pandas_1752846035684/work/dist/pandas-2.3.1-cp312-cp312-linux_x86_64.whl#sha256=fcabae92c246e264022b989e2b79e3d3e8d71f617efbdc9ccee4d0e9bbdf264f
@@ -81,6 +99,7 @@ plotly==6.2.0
 pmdarima==2.0.4
 prompt_toolkit==3.0.51
 prophet==1.1.7
+protobuf==6.32.0
 psutil==7.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
@@ -93,6 +112,8 @@ python-dateutil @ file:///croot/python-dateutil_1716495738603/work
 pytz @ file:///croot/pytz_1752135852232/work
 PyYAML==6.0.2
 pyzmq==27.0.1
+requests==2.32.4
+rich==14.1.0
 scikit-base==0.12.4
 scikit-learn==1.7.1
 scipy @ file:///croot/scipy_1747238027288/work/dist/scipy-1.15.3-cp312-cp312-linux_x86_64.whl#sha256=d08f7dad705164c63152142357d3775e85fa292913cb9b9a8fe7ae5fa6537d6b
@@ -106,6 +127,10 @@ statsforecast==2.0.2
 statsmodels==0.14.5
 sympy==1.14.0
 tbats==1.1.3
+tensorboard==2.20.0
+tensorboard-data-server==0.7.2
+tensorflow==2.20.0
+termcolor==3.1.0
 threadpoolctl==3.6.0
 toolz==1.0.0
 torch==2.8.0
@@ -119,7 +144,9 @@ tzdata @ file:///croot/python-tzdata_1746123641790/work
 urllib3==2.5.0
 utilsforecast==0.2.12
 wcwidth==0.2.13
+Werkzeug==3.1.3
 wheel==0.45.1
 widgetsnbextension==4.0.14
+wrapt==1.17.3
 xarray==2025.7.1
 xarray-einstats==0.9.1
