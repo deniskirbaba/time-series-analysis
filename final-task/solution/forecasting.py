@@ -24,6 +24,42 @@ class SalesForecaster:
     All-in-one sales forecasting class.
     """
 
+    def _select_data_for_store(self, sales: pd.DataFrame, dates: pd.DataFrame, prices: pd.DataFrame, store_id: int):
+        """
+        Selects data from sales, dates, prices tables for specified store.
+        """
+        sales = sales[sales["store_id"] == f"STORE_{store_id}"].drop(columns=["store_id"])
+        sales["item_id"] = sales["item_id"].str.replace(f"STORE_{store_id}_", "", regex=False)
+
+        cashback_cols = [col for col in dates.columns if col.startswith("CASHBACK_")]
+        cols_to_drop = [col for col in cashback_cols if col != f"CASHBACK_STORE_{store_id}"]
+        dates = dates.drop(columns=cols_to_drop)
+        dates.rename(columns={f"CASHBACK_STORE_{store_id}": "cashback"}, inplace=True)
+
+        prices = prices[prices["store_id"] == f"STORE_{store_id}"].drop(columns=["store_id"])
+        prices["item_id"] = prices["item_id"].str.replace(f"STORE_{store_id}_", "", regex=False)
+
+        return sales, dates, prices
+
+    def _apply_ema(self, series: pd.Series, alpha: float = 0.5):
+        """
+        Applies Exponential Moving Average (EMA) smoothing to the series.
+        """
+        return series.ewm(alpha=alpha).mean()
+
+    def _apply_imputation(self, series: pd.Series):
+        """
+        Interpolates zero values in the series using the weekly rolling mean window.
+        """
+        series = series.copy()
+        mask = series == 0
+        rolling_mean = series.replace(0, np.nan).rolling(window=7, min_periods=1, center=True).mean()
+        rolling_mean[rolling_mean.notna()] = rolling_mean[rolling_mean.notna()].astype(int)
+        series[mask] = rolling_mean[mask]
+        # If any zeros remain (e.g., at edges), fill with forward/backward fill
+        series = series.ffill().bfill()
+        return series
+
     def prepare_data(self, data_folder: Path, store_id: str):
         """
         Prepares the data for forecasting:
