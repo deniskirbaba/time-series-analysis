@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
 from sklearn.metrics import r2_score
+from sklearn.preprocessing import OneHotEncoder
 from sktime.forecasting.model_selection import (
     ForecastingGridSearchCV,
     SlidingWindowSplitter,
@@ -41,6 +42,84 @@ class SalesForecaster:
 
         return sales, dates, prices
 
+    def _merge_data(self, sales: pd.DataFrame, dates: pd.DataFrame, prices: pd.DataFrame):
+        """
+        Merges sales, dates, and prices data into a single DataFrame.
+        """
+        merged_df = pd.merge(sales, dates, on="date_id", how="left")
+        merged_df = pd.merge(merged_df, prices, on=["wm_yr_wk", "item_id"], how="left")
+
+        dates["date"] = pd.to_datetime(dates["date"])
+        merged_df = merged_df.sort_values("date")
+
+        return merged_df
+
+    def preprocess_data(
+        self, sales: pd.DataFrame, dates: pd.DataFrame, prices: pd.DataFrame, store_id: str, cutoff_date_id: int = None
+    ):
+        """
+        Prepares the data for forecasting:
+        - Selects data for the specified store.
+        - Merges the data into a single DataFrame.
+        - Formatting columns by:
+            - remove some unnecessary columns
+            - renaming some columns
+            - converting to needed types
+        - (Optional) Deletes values older than cutoff date_id.
+        - Asserts for NaNs in columns.
+        """
+        # Filter data for the specified store
+        sales, dates, prices = self._select_data_for_store(sales, dates, prices, store_id)
+
+        # Merge
+        merged_df = self._merge_data(sales, dates, prices)
+
+        # Formatting columns
+        merged_df.drop(columns=["wm_yr_wk", "weekday", "month", "year", "event_name_1", "event_name_2"], inplace=True)
+
+        merged_df["cashback"] = pd.to_numeric(merged_df["cashback"], errors="raise")
+        merged_df["sell_price"] = pd.to_numeric(merged_df["sell_price"], errors="raise")
+
+        merged_df["date"] = pd.to_datetime(merged_df["date"], errors="raise")
+        merged_df["day"] = merged_df["date"].dt.day
+        merged_df["month"] = merged_df["date"].dt.month
+        merged_df["year"] = merged_df["date"].dt.year
+        merged_df.drop(columns=["date"], inplace=True)
+
+        merged_df.rename(columns={"cnt": "target"}, inplace=True)
+        target_col = merged_df.pop("target")
+        merged_df["target"] = target_col
+
+        # (Optional) Delete values older than cutoff date_id
+        if cutoff_date_id:
+            merged_df = merged_df[merged_df["date_id"] > cutoff_date_id]
+
+        # Asserts for NaNs in columns
+        for col in set(merged_df.columns) - {"event_type_1", "event_type_2"}:
+            assert not merged_df[col].isna().any(), f"NaNs in {col} column"
+
+        return merged_df
+
+        # # Train, validation, and test splits
+        # test_size = 4 * 30  # 4 months
+        # train_val_size = 2 * 365 + 1 * 365  # 2 years + 1 year
+
+        # test_start_date_id = merged_df["date_id"].max() - test_size
+        # train_val_start_date_id = test_start_date_id - train_val_size - 1
+
+        # test = merged_df[merged_df["date_id"] > test_start_date_id]
+        # train_val = merged_df[
+        #     (merged_df["date_id"] > train_val_start_date_id) & (merged_df["date_id"] <= test_start_date_id)
+        # ]
+
+        # # Save splits (item_id: train_val, test)
+        # for item_id in sales.item_id.unique():
+        #     item_train_val = train_val[train_val["item_id"] == item_id]
+        #     item_test = test[test["item_id"] == item_id]
+
+        #     item_train_val.to_csv(data_folder / f"{store_id}_{item_id}_train_val.csv", index=False)
+        #     item_test.to_csv(data_folder / f"{store_id}_{item_id}_test.csv", index=False)
+
     def _apply_ema(self, series: pd.Series, alpha: float = 0.5):
         """
         Applies Exponential Moving Average (EMA) smoothing to the series.
@@ -59,70 +138,6 @@ class SalesForecaster:
         # If any zeros remain (e.g., at edges), fill with forward/backward fill
         series = series.ffill().bfill()
         return series
-
-    def prepare_data(self, data_folder: Path, store_id: str):
-        """
-        Prepares the data for forecasting:
-        - Loads sales, dates, prices data from CSV files.
-        - Selects data for the specified store.
-        - Merges the data into a single DataFrame.
-        - Make some preprocessing with columns:
-            - remove some unnecessary columns
-            - renaming some columns
-            - converting to needed types
-        - Make training, validation, and test splits of sizes (2 years, 1 year, 4 months).
-        - Saves the splits to CSV files with names: <store_id>_<item_id>_train_val.csv and <store_id>_<item_id>_test.csv.
-        """
-        sales = pd.read_csv(data_folder / "shop_sales.csv")
-        dates = pd.read_csv(data_folder / "shop_sales_dates.csv")
-        prices = pd.read_csv(data_folder / "shop_sales_prices.csv")
-
-        # Filter data for the specified store
-        sales = sales[sales["store_id"] == store_id].drop(columns=["store_id"])
-
-        cashback_cols = [col for col in dates.columns if col.startswith("CASHBACK_")]
-        cols_to_drop = [col for col in cashback_cols if col != f"CASHBACK_{store_id}"]
-        dates.drop(columns=cols_to_drop, inplace=True)
-        dates.rename(columns={f"CASHBACK_{store_id}": "cashback"}, inplace=True)
-
-        prices = prices[prices["store_id"] == store_id].drop(columns=["store_id"])
-
-        dates["date"] = pd.to_datetime(dates["date"])
-
-        # Merge
-        merged_df = pd.merge(sales, dates, on="date_id", how="left")
-        merged_df = pd.merge(merged_df, prices, on=["wm_yr_wk", "item_id"], how="left")
-        merged_df = merged_df.sort_values("date")
-
-        # Preprocessing
-        merged_df.drop(columns=["wm_yr_wk", "weekday", "month", "year"], inplace=True)
-
-        merged_df["cashback"] = pd.to_numeric(merged_df["cashback"], errors="coerce")
-        merged_df["sell_price"] = pd.to_numeric(merged_df["sell_price"], errors="coerce")
-
-        merged_df["day"] = merged_df["date"].dt.day
-        merged_df["month"] = merged_df["date"].dt.month
-        merged_df["year"] = merged_df["date"].dt.year
-
-        # Train, validation, and test splits
-        test_size = 4 * 30  # 4 months
-        train_val_size = 2 * 365 + 1 * 365  # 2 years + 1 year
-
-        test_start_date_id = merged_df["date_id"].max() - test_size
-        train_val_start_date_id = test_start_date_id - train_val_size - 1
-
-        test = merged_df[merged_df["date_id"] > test_start_date_id]
-        train_val = merged_df[
-            (merged_df["date_id"] > train_val_start_date_id) & (merged_df["date_id"] <= test_start_date_id)
-        ]
-
-        # Save splits (item_id: train_val, test)
-        for item_id in sales.item_id.unique():
-            item_train_val = train_val[train_val["item_id"] == item_id]
-            item_test = test[test["item_id"] == item_id]
-
-            item_train_val.to_csv(data_folder / f"{store_id}_{item_id}_train_val.csv", index=False)
-            item_test.to_csv(data_folder / f"{store_id}_{item_id}_test.csv", index=False)
 
     def box_cox_transform(self, series: pd.Series):
         """

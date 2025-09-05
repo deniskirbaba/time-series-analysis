@@ -30,11 +30,11 @@ def pretty_info(df, name):
 def plot_item_features(df):
     fig, ax = plt.subplots(figsize=(14, 5))
 
-    ax.plot(df["date"], df["cnt"], label="Sales", color="tab:blue")
+    ax.plot(df["date_id"], df["target"], label="Sales", color="tab:blue")
 
     # Plot green vertical lines for weekends (wday=6 or 7)
     weekend_mask = df["wday"].isin([6, 7])
-    weekend_dates = df.loc[weekend_mask, "date"].values
+    weekend_dates = df.loc[weekend_mask, "date_id"].values
     for i, date in enumerate(weekend_dates):
         ax.axvline(
             x=date,
@@ -44,9 +44,9 @@ def plot_item_features(df):
             label="Weekend" if i == 0 and "Weekend" not in ax.get_legend_handles_labels()[1] else "",
         )
 
-    # Plot * at y=0 for event_name_1 not NaN
-    event_mask = df["event_name_1"].notna()
-    event_dates = df.loc[event_mask, "date"].values
+    # Plot * at y=0 for event_type_1 or event_type_2 not NaN
+    event_mask = df["event_type_1"].notna() | df["event_type_2"].notna()
+    event_dates = df.loc[event_mask, "date_id"].values
     ax.scatter(
         event_dates,
         np.zeros(len(event_dates)),
@@ -56,7 +56,7 @@ def plot_item_features(df):
         label="Event" if "Event" not in ax.get_legend_handles_labels()[1] else "",
     )
 
-    ax.set_xlabel("date")
+    ax.set_xlabel("date_id")
     ax.set_ylabel("Sales Count")
     ax.set_title("Sales, Events, and Weekends")
     ax.legend()
@@ -64,7 +64,7 @@ def plot_item_features(df):
     plt.show()
 
 
-def plot_linear_trend(df, date_col="date", target_col="cnt") -> LinearRegression:
+def plot_linear_trend(df, date_col="date_id", target_col="target") -> LinearRegression:
     X = np.arange(len(df)).reshape(-1, 1)
     y = df[target_col].values
 
@@ -83,7 +83,7 @@ def plot_linear_trend(df, date_col="date", target_col="cnt") -> LinearRegression
         linewidth=2,
     )
     plt.title("Sales Count and Linear Trend")
-    plt.xlabel("Date")
+    plt.xlabel("date_id")
     plt.ylabel("Sales Count")
     plt.legend()
     plt.show()
