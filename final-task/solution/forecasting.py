@@ -1,3 +1,4 @@
+import json
 from itertools import product
 from pathlib import Path
 
@@ -49,10 +50,26 @@ class SalesForecaster:
         merged_df = pd.merge(sales, dates, on="date_id", how="left")
         merged_df = pd.merge(merged_df, prices, on=["wm_yr_wk", "item_id"], how="left")
 
-        dates["date"] = pd.to_datetime(dates["date"])
-        merged_df = merged_df.sort_values("date")
-
         return merged_df
+
+    def _apply_ema(self, series: pd.Series, alpha: float = 0.5):
+        """
+        Applies Exponential Moving Average (EMA) smoothing to the series.
+        """
+        return series.ewm(alpha=alpha).mean()
+
+    def _apply_imputation(self, series: pd.Series):
+        """
+        Interpolates zero values in the series using the weekly rolling mean window.
+        """
+        series = series.copy()
+        mask = series == 0
+        rolling_mean = series.replace(0, np.nan).rolling(window=7, min_periods=1, center=True).mean()
+        rolling_mean[rolling_mean.notna()] = rolling_mean[rolling_mean.notna()].astype(int)
+        series[mask] = rolling_mean[mask]
+        # If any zeros remain (e.g., at edges), fill with forward/backward fill
+        series = series.ffill().bfill()
+        return series
 
     def preprocess_data(
         self, sales: pd.DataFrame, dates: pd.DataFrame, prices: pd.DataFrame, store_id: str, cutoff_date_id: int = None
@@ -66,6 +83,7 @@ class SalesForecaster:
             - renaming some columns
             - converting to needed types
         - (Optional) Deletes values older than cutoff date_id.
+        - Applies OHE to categorical columns.
         - Asserts for NaNs in columns.
         """
         # Filter data for the specified store
@@ -86,58 +104,90 @@ class SalesForecaster:
         merged_df["year"] = merged_df["date"].dt.year
         merged_df.drop(columns=["date"], inplace=True)
 
-        merged_df.rename(columns={"cnt": "target"}, inplace=True)
-        target_col = merged_df.pop("target")
-        merged_df["target"] = target_col
-
         # (Optional) Delete values older than cutoff date_id
         if cutoff_date_id:
             merged_df = merged_df[merged_df["date_id"] > cutoff_date_id]
 
+        # OHE for categorical columns
+        categorical_cols = ["event_type_1", "event_type_2"]
+        ohe = OneHotEncoder(sparse_output=False)
+        ohe_encoded = ohe.fit_transform(merged_df[categorical_cols].fillna("NoEvent"))
+        ohe_df = pd.DataFrame(ohe_encoded, columns=ohe.get_feature_names_out(categorical_cols))
+        merged_df = pd.concat([merged_df.reset_index(drop=True), ohe_df.reset_index(drop=True)], axis=1)
+        merged_df.drop(columns=categorical_cols, inplace=True)
+
+        # Target
+        merged_df.rename(columns={"cnt": "target"}, inplace=True)
+        target_col = merged_df.pop("target")
+        merged_df["target"] = target_col
+
+        # Apply sorting by date_id
+        merged_df["date_id"] = pd.to_numeric(merged_df["date_id"], errors="raise")
+        merged_df = merged_df.sort_values(["date_id"]).reset_index(drop=True)
+
         # Asserts for NaNs in columns
-        for col in set(merged_df.columns) - {"event_type_1", "event_type_2"}:
+        for col in merged_df.columns:
             assert not merged_df[col].isna().any(), f"NaNs in {col} column"
 
         return merged_df
 
-        # # Train, validation, and test splits
-        # test_size = 4 * 30  # 4 months
-        # train_val_size = 2 * 365 + 1 * 365  # 2 years + 1 year
-
-        # test_start_date_id = merged_df["date_id"].max() - test_size
-        # train_val_start_date_id = test_start_date_id - train_val_size - 1
-
-        # test = merged_df[merged_df["date_id"] > test_start_date_id]
-        # train_val = merged_df[
-        #     (merged_df["date_id"] > train_val_start_date_id) & (merged_df["date_id"] <= test_start_date_id)
-        # ]
-
-        # # Save splits (item_id: train_val, test)
-        # for item_id in sales.item_id.unique():
-        #     item_train_val = train_val[train_val["item_id"] == item_id]
-        #     item_test = test[test["item_id"] == item_id]
-
-        #     item_train_val.to_csv(data_folder / f"{store_id}_{item_id}_train_val.csv", index=False)
-        #     item_test.to_csv(data_folder / f"{store_id}_{item_id}_test.csv", index=False)
-
-    def _apply_ema(self, series: pd.Series, alpha: float = 0.5):
+    def make_data_splits(
+        self,
+        sales: pd.DataFrame,
+        dates: pd.DataFrame,
+        prices: pd.DataFrame,
+        store_id: str,
+        data_folder: Path,
+        selling_items_types: dict,
+        ema: float | None = None,
+        forecast_horizons: list = [7, 30, 120],
+    ):
         """
-        Applies Exponential Moving Average (EMA) smoothing to the series.
+        Prepares the data for forecasting:
+        - Applies common preprocessing steps.
+        - Makes train, val and test splits for each item_id in the store.
+        - Applies zero imputing (only for high sell items) and EMA (if specified) for train splits.
+        - Saves the splits as CSV files in the specified folder.
         """
-        return series.ewm(alpha=alpha).mean()
+        train_size = 2 * 365  # 2 years
+        val_size = 1 * 365  # 1 year
 
-    def _apply_imputation(self, series: pd.Series):
-        """
-        Interpolates zero values in the series using the weekly rolling mean window.
-        """
-        series = series.copy()
-        mask = series == 0
-        rolling_mean = series.replace(0, np.nan).rolling(window=7, min_periods=1, center=True).mean()
-        rolling_mean[rolling_mean.notna()] = rolling_mean[rolling_mean.notna()].astype(int)
-        series[mask] = rolling_mean[mask]
-        # If any zeros remain (e.g., at edges), fill with forward/backward fill
-        series = series.ffill().bfill()
-        return series
+        for fh in tqdm(forecast_horizons, desc="Forecasting horizons"):
+            cutoff_date_id = sales["date_id"].max() - train_size - val_size - fh
+            data = self.preprocess_data(sales, dates, prices, store_id, cutoff_date_id=cutoff_date_id)
+            for current_item_id in data.item_id.unique():
+                item_data = data[data["item_id"] == current_item_id].copy()
+
+                test_start_date_id = item_data["date_id"].max() - fh
+                val_start_date_id = test_start_date_id - val_size - 1
+                train_start_date_id = val_start_date_id - train_size - 1
+
+                test = item_data[item_data["date_id"] > test_start_date_id]
+                val = item_data[
+                    (item_data["date_id"] > val_start_date_id) & (item_data["date_id"] <= test_start_date_id)
+                ]
+                train = item_data[
+                    (item_data["date_id"] > train_start_date_id) & (item_data["date_id"] <= val_start_date_id)
+                ]
+
+                # Preprocess train data
+                # Apply imputation for zero values for high-seller items
+                for high_item_id in selling_items_types["high"]:
+                    item_mask = train["item_id"] == high_item_id
+                    train.loc[item_mask, "target"] = self._apply_imputation(train.loc[item_mask, "target"])
+
+                # (Optional) Apply Exponential Moving Average (EMA) smoothing to the target column
+                if ema:
+                    train.loc[:, "target"] = train.loc[:, "target"].astype(float)
+                    for unique_item_id in train["item_id"].unique():
+                        item_mask = train["item_id"] == unique_item_id
+                        train.loc[item_mask, "target"] = self._apply_ema(train.loc[item_mask, "target"], alpha=ema)
+
+                # Save splits (item_id: train, val, test)
+                ema_note = f"_ema{ema}" if ema is not None else ""
+                train.to_csv(data_folder / f"{store_id}_{current_item_id}_train_fh{fh}{ema_note}.csv", index=False)
+                val.to_csv(data_folder / f"{store_id}_{current_item_id}_val_fh{fh}{ema_note}.csv", index=False)
+                test.to_csv(data_folder / f"{store_id}_{current_item_id}_test_fh{fh}{ema_note}.csv", index=False)
 
     def box_cox_transform(self, series: pd.Series):
         """
