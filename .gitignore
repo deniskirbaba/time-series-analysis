@@ -1,5 +1,11 @@
 # Models
-/final-task/models
+/final-task/models/ema/*
+/final-task/models/naive_drift/*
+/final-task/models/naive_last/*
+/final-task/models/naive_mean/*
+/final-task/models/prophet/*
+/final-task/models/sarima/*
+/final-task/models/sarimax/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
