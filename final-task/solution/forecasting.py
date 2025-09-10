@@ -26,6 +26,8 @@ class SalesForecaster:
     All-in-one sales forecasting class.
     """
 
+    FH2STEP = {7: 89, 30: 83, 120: 61}
+
     def _select_data_for_store(self, sales: pd.DataFrame, dates: pd.DataFrame, prices: pd.DataFrame, store_id: int):
         """
         Selects data from sales, dates, prices tables for specified store.
@@ -52,24 +54,26 @@ class SalesForecaster:
 
         return merged_df
 
-    def _apply_ema(self, series: pd.Series, alpha: float = 0.5):
+    def apply_ema(self, series: pd.Series, alpha: float = 0.5):
         """
         Applies Exponential Moving Average (EMA) smoothing to the series.
         """
         return series.ewm(alpha=alpha).mean()
 
-    def _apply_imputation(self, series: pd.Series):
+    def apply_imputation(self, series: pd.Series):
         """
         Interpolates zero values in the series using the weekly rolling mean window.
         """
-        series = series.copy()
-        mask = series == 0
+        series = series.copy().astype(float)
+
+        zero_mask = series == 0
         rolling_mean = series.replace(0, np.nan).rolling(window=7, min_periods=1, center=True).mean()
-        rolling_mean[rolling_mean.notna()] = rolling_mean[rolling_mean.notna()].astype(int)
-        series[mask] = rolling_mean[mask]
+        series[zero_mask] = rolling_mean[zero_mask]
+
         # If any zeros remain (e.g., at edges), fill with forward/backward fill
         series = series.ffill().bfill()
-        return series
+
+        return series.round()
 
     def preprocess_data(
         self, sales: pd.DataFrame, dates: pd.DataFrame, prices: pd.DataFrame, store_id: str, cutoff_date_id: int = None
@@ -138,56 +142,43 @@ class SalesForecaster:
         prices: pd.DataFrame,
         store_id: str,
         data_folder: Path,
-        selling_items_types: dict,
-        ema: float | None = None,
         forecast_horizons: list = [7, 30, 120],
     ):
         """
         Prepares the data for forecasting:
         - Applies common preprocessing steps.
-        - Makes train, val and test splits for each item_id in the store.
-        - Applies zero imputing (only for high sell items) and EMA (if specified) for train splits.
+        - Makes (train + val) and test splits for each item_id in the store.
         - Saves the splits as CSV files in the specified folder.
         """
-        train_size = 2 * 365  # 2 years
-        val_size = 1 * 365  # 1 year
+        train_val_size = 2 * 365 + 1 * 365  # 3 years
 
         for fh in tqdm(forecast_horizons, desc="Forecasting horizons"):
-            cutoff_date_id = sales["date_id"].max() - train_size - val_size - fh
+            cutoff_date_id = sales["date_id"].max() - train_val_size - fh
             data = self.preprocess_data(sales, dates, prices, store_id, cutoff_date_id=cutoff_date_id)
             for current_item_id in data.item_id.unique():
                 item_data = data[data["item_id"] == current_item_id].copy()
 
                 test_start_date_id = item_data["date_id"].max() - fh
-                val_start_date_id = test_start_date_id - val_size - 1
-                train_start_date_id = val_start_date_id - train_size - 1
+                train_val_start_date_id = test_start_date_id - train_val_size - 1
 
                 test = item_data[item_data["date_id"] > test_start_date_id]
-                val = item_data[
-                    (item_data["date_id"] > val_start_date_id) & (item_data["date_id"] <= test_start_date_id)
-                ]
-                train = item_data[
-                    (item_data["date_id"] > train_start_date_id) & (item_data["date_id"] <= val_start_date_id)
+                train_val = item_data[
+                    (item_data["date_id"] > train_val_start_date_id) & (item_data["date_id"] <= test_start_date_id)
                 ]
 
-                # Preprocess train data
-                # Apply imputation for zero values for high-seller items
-                for high_item_id in selling_items_types["high"]:
-                    item_mask = train["item_id"] == high_item_id
-                    train.loc[item_mask, "target"] = self._apply_imputation(train.loc[item_mask, "target"])
+                # Save splits
+                train_val.to_csv(data_folder / f"{store_id}_{current_item_id}_train_val_fh{fh}.csv", index=False)
+                test.to_csv(data_folder / f"{store_id}_{current_item_id}_test_fh{fh}.csv", index=False)
 
-                # (Optional) Apply Exponential Moving Average (EMA) smoothing to the target column
-                if ema:
-                    train.loc[:, "target"] = train.loc[:, "target"].astype(float)
-                    for unique_item_id in train["item_id"].unique():
-                        item_mask = train["item_id"] == unique_item_id
-                        train.loc[item_mask, "target"] = self._apply_ema(train.loc[item_mask, "target"], alpha=ema)
-
-                # Save splits (item_id: train, val, test)
-                ema_note = f"_ema{ema}" if ema is not None else ""
-                train.to_csv(data_folder / f"{store_id}_{current_item_id}_train_fh{fh}{ema_note}.csv", index=False)
-                val.to_csv(data_folder / f"{store_id}_{current_item_id}_val_fh{fh}{ema_note}.csv", index=False)
-                test.to_csv(data_folder / f"{store_id}_{current_item_id}_test_fh{fh}{ema_note}.csv", index=False)
+    def post_process_predictions(self, series: pd.Series):
+        """
+        Post-processes the forecasted series:
+        - Sets negative values to zero.
+        - Rounds fractional values to the nearest integer.
+        """
+        series[series < 0] = 0
+        series = series.round()
+        return series
 
     def box_cox_transform(self, series: pd.Series):
         """
@@ -197,67 +188,27 @@ class SalesForecaster:
         return box_cox_transformer.fit_transform(series.replace(0, 1e-6))
 
     def cross_validate_forecaster(
-        self, forecaster, train_val: pd.DataFrame, fh: int, param_grid: dict, exog_cols: list
-    ):
-        """
-        Cross-validate the forecaster on the training and validation data.
-
-        Uses ForecastingGridSearchCV and SMAPE as the scoring metric.
-
-        Returns the fitted ForecastingGridSearchCV object and fitted on last 2 years of train_val data estimator.
-        """
-        if fh == 7:
-            cv = SlidingWindowSplitter(fh=np.arange(1, 8), window_length=365 * 2, step_length=38)
-        elif fh == 30:
-            cv = SlidingWindowSplitter(fh=np.arange(1, 31), window_length=365 * 2, step_length=35)
-        elif fh == 120:
-            cv = SlidingWindowSplitter(fh=np.arange(1, 121), window_length=365 * 2, step_length=25)
-        else:
-            raise ValueError("Unsupported forecasting horizon. Use 7, 30, or 120.")
-
-        gscv = ForecastingGridSearchCV(
-            forecaster=forecaster,
-            cv=cv,
-            param_grid=param_grid,
-            scoring=MeanAbsolutePercentageError(symmetric=True),
-            verbose=1,
-            backend="loky",
-            backend_params={"n_jobs": -1},
-            error_score="raise",
-        )
-
-        X = train_val[exog_cols] if exog_cols else None
-        gscv.fit(y=train_val.cnt, X=X)
-
-        # Fit the best forecaster on the last 2 years of train_val data
-        last_2_years = train_val.tail(365 * 2)
-        X_last_2_years = last_2_years[exog_cols] if exog_cols else None
-
-        best_forecaster = gscv.best_forecaster_.clone()
-        best_forecaster.fit(y=last_2_years.cnt, X=X_last_2_years)
-
-        return gscv, best_forecaster
-
-    def custom_cross_validate_forecaster(
-        self, forecaster, train_val: pd.DataFrame, fh: int, param_grid: dict, exog_cols: list
+        self,
+        forecaster,
+        train_val: pd.DataFrame,
+        fh: int,
+        param_grid: dict,
+        exog_cols: list,
+        ema: float | None = None,
+        zero_target_inputing: bool = False,
     ):
         """
         Custom grid search for forecaster with error skipping.
 
-        Tries all parameter combinations, skips those that fail on fit.
-        Parallelized using joblib (loky backend).
-        Uses SMAPE as the scoring metric.
-        Returns: best_params, best_score, best_forecaster, all_results (list of dicts)
+        - Tries all parameter combinations, skips those that fail on fit.
+        - Parallelized using joblib (loky backend).
+        - Uses SMAPE as the scoring metric.
+        - Makes preprocessing for train split (zero imputation for high-seller items, EMA smoothing).
+        - Makes postprocessing for predictions (set negatives to zero, round to int).
+        - Fits the best forecaster on the last 2 years of train_val data.
+        - Returns: best_params, best_score, best_forecaster, all_results (list of dicts)
         """
-
-        if fh == 7:
-            cv = SlidingWindowSplitter(fh=np.arange(1, 8), window_length=365 * 2, step_length=38)
-        elif fh == 30:
-            cv = SlidingWindowSplitter(fh=np.arange(1, 31), window_length=365 * 2, step_length=35)
-        elif fh == 120:
-            cv = SlidingWindowSplitter(fh=np.arange(1, 121), window_length=365 * 2, step_length=25)
-        else:
-            raise ValueError("Unsupported forecasting horizon. Use 7, 30, or 120.")
+        cv = SlidingWindowSplitter(fh=np.arange(1, fh + 1), window_length=365 * 2, step_length=self.FH2STEP[fh])
 
         param_names = list(param_grid.keys())
         param_values = list(param_grid.values())
@@ -269,14 +220,22 @@ class SalesForecaster:
                 local_forecaster = forecaster.set_params(**params)
                 scores = []
                 for train_idx, test_idx in cv.split(train_val):
-                    y_train = train_val.cnt.iloc[train_idx]
-                    y_test = train_val.cnt.iloc[test_idx]
+                    y_train = train_val.target.iloc[train_idx]
+                    y_test = train_val.target.iloc[test_idx]
                     X_train = train_val[exog_cols].iloc[train_idx] if exog_cols else None
                     X_test = train_val[exog_cols].iloc[test_idx] if exog_cols else None
 
+                    if zero_target_inputing:
+                        y_train = self.apply_imputation(y_train)
+                    if ema:
+                        y_train = self.apply_ema(y_train, alpha=ema)
+
                     forecaster_clone = local_forecaster.clone()
                     forecaster_clone.fit(y=y_train, X=X_train)
+
                     y_pred = forecaster_clone.predict(fh=np.arange(1, len(y_test) + 1), X=X_test)
+                    y_pred = self.post_process_predictions(y_pred)
+
                     smape = MeanAbsolutePercentageError(symmetric=True)(y_test, y_pred)
                     scores.append(smape)
                 if scores:
@@ -302,9 +261,17 @@ class SalesForecaster:
         # Fit best forecaster on last 2 years
         if best_params is not None:
             last_2_years = train_val.tail(365 * 2)
+
+            y_last_2_years = last_2_years.target
+            if zero_target_inputing:
+                y_last_2_years = self.apply_imputation(y_last_2_years)
+            if ema:
+                y_last_2_years = self.apply_ema(y_last_2_years, alpha=ema)
+
             X_last_2_years = last_2_years[exog_cols] if exog_cols else None
+
             best_forecaster = forecaster.set_params(**best_params)
-            best_forecaster.fit(y=last_2_years.cnt, X=X_last_2_years)
+            best_forecaster.fit(y=y_last_2_years, X=X_last_2_years)
 
         return (best_params, best_score, all_results), best_forecaster
 
