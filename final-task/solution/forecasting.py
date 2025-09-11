@@ -5,17 +5,11 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
-from joblib import Parallel, delayed
+from joblib import delayed
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import OneHotEncoder
-from sktime.forecasting.model_selection import (
-    ForecastingGridSearchCV,
-    SlidingWindowSplitter,
-)
-from sktime.performance_metrics.forecasting import (
-    MeanAbsoluteError,
-    MeanAbsolutePercentageError,
-)
+from sktime.forecasting.model_selection import SlidingWindowSplitter
+from sktime.performance_metrics.forecasting import MeanAbsolutePercentageError
 from sktime.transformations.series.boxcox import BoxCoxTransformer
 from tqdm.auto import tqdm
 from utils import ProgressParallel
@@ -280,17 +274,17 @@ class SalesForecaster:
         Forecast the sales using the fitted forecaster for given forecasting horizon.
         """
         forecast = forecaster.predict(fh=np.arange(1, fh + 1), X=exog)
+        forecast = self.post_process_predictions(forecast)
         return forecast
 
     def calculate_metrics(self, forecast: pd.Series, gt: pd.Series) -> dict[str, float]:
         """
-        Calculates metrics (MAE, SMAPE, R2) for the forecasted series against the ground truth.
+        Calculates metrics (SMAPE, R2) for the forecasted series against the ground truth.
         """
-        mae = MeanAbsoluteError()(gt, forecast)
         smape = MeanAbsolutePercentageError(symmetric=True)(gt, forecast)
         r2 = r2_score(gt, forecast)
 
-        return {"MAE": mae, "SMAPE": smape, "R2": r2}
+        return {"SMAPE": smape, "R2": r2}
 
     def save_model(self, model, save_path: Path):
         """

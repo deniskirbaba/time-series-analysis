@@ -1,0 +1,4241 @@
+{
+    "7": {
+        "naive_last": {
+            "064": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.2857142857142857,
+                    "R2": -0.16666666666666652
+                }
+            },
+            "065": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 1.4285714285714286,
+                    "R2": -1.333333333333334
+                }
+            },
+            "090": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.3191237148290919,
+                    "R2": 0.42705027367646387
+                }
+            },
+            "252": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.727658019729631,
+                    "R2": -0.059929078014184345
+                }
+            },
+            "325": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.4437467294610152,
+                    "R2": -0.24806201550387574
+                }
+            },
+            "339": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.8888888888888891,
+                    "R2": 0.03749999999999987
+                }
+            },
+            "376": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 1.4285714285714286,
+                    "R2": -8.333333333333332
+                }
+            },
+            "546": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.39999999999999997,
+                    "R2": 0.0
+                }
+            },
+            "547": {
+                "best_params": {
+                    "sp": 30
+                },
+                "metrics": {
+                    "SMAPE": 0.6717444039762798,
+                    "R2": -1.148008849557522
+                }
+            },
+            "555": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.35303804382751747,
+                    "R2": -0.6142401700318807
+                }
+            },
+            "584": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.8825396825396826,
+                    "R2": 0.0
+                }
+            },
+            "586": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.24502279635258356,
+                    "R2": 0.060289389067524124
+                }
+            },
+            "587": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.20440625329730072,
+                    "R2": -0.04858299595141702
+                }
+            },
+            "714": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.20157959749688276,
+                    "R2": -0.1259689922480618
+                }
+            },
+            "727": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.4979591836734693,
+                    "R2": -1.8518518518518516
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.598570963795299,
+                    "R2": -0.8936758415832091
+                }
+            }
+        },
+        "naive_mean": {
+            "064": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.2857142857142857,
+                    "R2": -0.16666666666666652
+                }
+            },
+            "065": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 1.1428571428571428,
+                    "R2": -1.041666666666667
+                }
+            },
+            "090": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.45541666846391193,
+                    "R2": -0.004151143001701829
+                }
+            },
+            "252": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.6482039967754254,
+                    "R2": -0.02269503546099272
+                }
+            },
+            "325": {
+                "best_params": {
+                    "window_length": 3
+                },
+                "metrics": {
+                    "SMAPE": 0.5187384044526901,
+                    "R2": -0.13953488372093004
+                }
+            },
+            "339": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.9503401360544218,
+                    "R2": -0.08888888888888902
+                }
+            },
+            "376": {
+                "best_params": {
+                    "window_length": 5
+                },
+                "metrics": {
+                    "SMAPE": 1.7142857142857142,
+                    "R2": -5.999999999999998
+                }
+            },
+            "546": {
+                "best_params": {
+                    "window_length": 5
+                },
+                "metrics": {
+                    "SMAPE": 0.39999999999999997,
+                    "R2": 0.0
+                }
+            },
+            "547": {
+                "best_params": {
+                    "window_length": 5
+                },
+                "metrics": {
+                    "SMAPE": 0.4698438692920289,
+                    "R2": -0.03993362831858405
+                }
+            },
+            "555": {
+                "best_params": {
+                    "window_length": 5
+                },
+                "metrics": {
+                    "SMAPE": 0.30643436236283134,
+                    "R2": -0.019128586609989284
+                }
+            },
+            "584": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.8825396825396826,
+                    "R2": 0.0
+                }
+            },
+            "586": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.2947068680442974,
+                    "R2": -0.2717041800643085
+                }
+            },
+            "587": {
+                "best_params": {
+                    "window_length": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.20440625329730072,
+                    "R2": -0.04858299595141702
+                }
+            },
+            "714": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.21017355384392516,
+                    "R2": -0.23449612403100772
+                }
+            },
+            "727": {
+                "best_params": {
+                    "window_length": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.4979591836734693,
+                    "R2": -1.8518518518518516
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5987746747771417,
+                    "R2": -0.6619533767488669
+                }
+            }
+        },
+        "naive_drift": {
+            "064": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.7142857142857142,
+                    "R2": -5.999999999999998
+                }
+            },
+            "065": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.9523809523809524,
+                    "R2": -0.16666666666666696
+                }
+            },
+            "090": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.44297335267315047,
+                    "R2": -0.16835702129616847
+                }
+            },
+            "252": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.727658019729631,
+                    "R2": -0.059929078014184345
+                }
+            },
+            "325": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.4437467294610152,
+                    "R2": -0.24806201550387574
+                }
+            },
+            "339": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.9503401360544218,
+                    "R2": -0.08888888888888902
+                }
+            },
+            "376": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2857142857142857,
+                    "R2": -0.16666666666666652
+                }
+            },
+            "546": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.39999999999999997,
+                    "R2": 0.0
+                }
+            },
+            "547": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.5669064359888439,
+                    "R2": -0.3225663716814158
+                }
+            },
+            "555": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.35303804382751747,
+                    "R2": -0.6142401700318807
+                }
+            },
+            "584": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.8825396825396826,
+                    "R2": 0.0
+                }
+            },
+            "586": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2827693893763323,
+                    "R2": -0.032556270096463
+                }
+            },
+            "587": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.20440625329730072,
+                    "R2": -0.04858299595141702
+                }
+            },
+            "714": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.20164899405886122,
+                    "R2": -0.03100775193798433
+                }
+            },
+            "727": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.4979591836734693,
+                    "R2": -1.8518518518518516
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5937578115374118,
+                    "R2": -0.6532917165724974
+                }
+            }
+        },
+        "ema": {
+            "064": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.7142857142857142,
+                    "R2": -5.999999999999998
+                }
+            },
+            "065": {
+                "best_params": {
+                    "damped_trend": false,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.9523809523809524,
+                    "R2": -0.16666666666666696
+                }
+            },
+            "090": {
+                "best_params": {
+                    "damped_trend": false,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.3620634230930178,
+                    "R2": 0.22879582355917394
+                }
+            },
+            "252": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.727658019729631,
+                    "R2": -0.059929078014184345
+                }
+            },
+            "325": {
+                "best_params": {
+                    "damped_trend": false,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4796631939489083,
+                    "R2": -0.11240310077519378
+                }
+            },
+            "339": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.9503401360544218,
+                    "R2": -0.08888888888888902
+                }
+            },
+            "376": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.5714285714285714,
+                    "R2": -1.333333333333333
+                }
+            },
+            "546": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.40113378684807255,
+                    "R2": 0.1428571428571429
+                }
+            },
+            "547": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.5468257180888438,
+                    "R2": -0.25674778761061945
+                }
+            },
+            "555": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.35303804382751747,
+                    "R2": -0.6142401700318807
+                }
+            },
+            "584": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.6428571428571429,
+                    "R2": -0.2058823529411764
+                }
+            },
+            "586": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.23213403283375295,
+                    "R2": 0.17845659163987138
+                }
+            },
+            "587": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.1888850930397945,
+                    "R2": 0.09784075573549256
+                }
+            },
+            "714": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.190701182297821,
+                    "R2": -0.18023255813953476
+                }
+            },
+            "727": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4979591836734693,
+                    "R2": -1.8518518518518516
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5874236129591754,
+                    "R2": -0.6814816982974431
+                }
+            }
+        },
+        "prophet": {
+            "064": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.5714285714285714,
+                    "R2": -1.333333333333333
+                }
+            },
+            "065": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 25,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.9523809523809524,
+                    "R2": -0.16666666666666696
+                }
+            },
+            "090": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": null,
+                    "n_changepoints": 50,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.3685706427081238,
+                    "R2": 0.25688790763994307
+                }
+            },
+            "252": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.6510406644047197,
+                    "R2": 0.0790780141843972
+                }
+            },
+            "325": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.48843537414965993,
+                    "R2": -0.24806201550387574
+                }
+            },
+            "339": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.9106575963718821,
+                    "R2": -0.05972222222222223
+                }
+            },
+            "376": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 1.1428571428571428,
+                    "R2": -3.666666666666666
+                }
+            },
+            "546": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.3439909297052154,
+                    "R2": 0.2142857142857143
+                }
+            },
+            "547": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.5386063862122737,
+                    "R2": -0.32179203539823
+                }
+            },
+            "555": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.40930232275280926,
+                    "R2": -1.4362380446333685
+                }
+            },
+            "584": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.6523809523809524,
+                    "R2": -0.1470588235294117
+                }
+            },
+            "586": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 25,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.41271560834269494,
+                    "R2": -2.0470257234726685
+                }
+            },
+            "587": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 25,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.19294960238710976,
+                    "R2": -0.010796221322536992
+                }
+            },
+            "714": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 50,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.29179254780300073,
+                    "R2": -1.27906976744186
+                }
+            },
+            "727": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.6326530612244898,
+                    "R2": -4.314814814814814
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5706508236739732,
+                    "R2": -0.9653996465930398
+                }
+            }
+        },
+        "sarima": {
+            "064": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2857142857142857,
+                    "R2": -0.16666666666666652
+                }
+            },
+            "065": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6666666666666667,
+                    "R2": 0.12499999999999989
+                }
+            },
+            "090": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.3450607073650499,
+                    "R2": 0.30614967112828306
+                }
+            },
+            "252": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6373356170348652,
+                    "R2": -0.010283687943262398
+                }
+            },
+            "325": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.49739383423593947,
+                    "R2": -0.49224806201550364
+                }
+            },
+            "339": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.7936507936507937,
+                    "R2": 0.1152777777777777
+                }
+            },
+            "376": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.4285714285714286,
+                    "R2": -8.333333333333332
+                }
+            },
+            "546": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4979591836734693,
+                    "R2": -0.1428571428571428
+                }
+            },
+            "547": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4920722003150825,
+                    "R2": 0.036725663716814294
+                }
+            },
+            "555": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.37412250938086805,
+                    "R2": -1.0085015940488837
+                }
+            },
+            "584": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.2142857142857142,
+                    "R2": -0.32352941176470584
+                }
+            },
+            "586": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.29032348979671196,
+                    "R2": -0.46302250803858525
+                }
+            },
+            "587": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.17014682721018232,
+                    "R2": 0.2560728744939271
+                }
+            },
+            "714": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.14966620680906395,
+                    "R2": 0.2945736434108528
+                }
+            },
+            "727": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.41768707482993195,
+                    "R2": -1.333333333333333
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5507104359693369,
+                    "R2": -0.7426650739649173
+                }
+            }
+        },
+        "sarimax": {
+            "064": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.0,
+                    "R2": 1.0
+                }
+            },
+            "065": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6666666666666667,
+                    "R2": 0.12499999999999989
+                }
+            },
+            "090": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.34081483079552727,
+                    "R2": 0.29616852950646255
+                }
+            },
+            "252": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6178290898787794,
+                    "R2": 0.09645390070921989
+                }
+            },
+            "325": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4458168398018022,
+                    "R2": -0.05813953488372081
+                }
+            },
+            "339": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.7936507936507937,
+                    "R2": 0.1152777777777777
+                }
+            },
+            "376": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.4285714285714286,
+                    "R2": -8.333333333333332
+                }
+            },
+            "546": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4979591836734693,
+                    "R2": -0.1428571428571428
+                }
+            },
+            "547": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4920722003150825,
+                    "R2": 0.036725663716814294
+                }
+            },
+            "555": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.32578361507311665,
+                    "R2": -0.14187035069075438
+                }
+            },
+            "584": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.119047619047619,
+                    "R2": -0.2941176470588236
+                }
+            },
+            "586": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.236982850480177,
+                    "R2": 0.10811897106109325
+                }
+            },
+            "587": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.17000627826088302,
+                    "R2": 0.2607962213225371
+                }
+            },
+            "714": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.12960389364330252,
+                    "R2": 0.5116279069767442
+                }
+            },
+            "727": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4585034013605442,
+                    "R2": -1.4629629629629628
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5148872460812794,
+                    "R2": -0.5255408000477391
+                }
+            }
+        }
+    },
+    "30": {
+        "naive_last": {
+            "064": {
+                "best_params": {
+                    "sp": 30
+                },
+                "metrics": {
+                    "SMAPE": 0.5333333333333333,
+                    "R2": -1.5609756097560972
+                }
+            },
+            "065": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 0.8444444444444444,
+                    "R2": -0.29032258064516125
+                }
+            },
+            "090": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 1.16676893316339,
+                    "R2": -0.6989901588160421
+                }
+            },
+            "252": {
+                "best_params": {
+                    "sp": 30
+                },
+                "metrics": {
+                    "SMAPE": 0.633567719601226,
+                    "R2": -1.4343765774861184
+                }
+            },
+            "325": {
+                "best_params": {
+                    "sp": 30
+                },
+                "metrics": {
+                    "SMAPE": 0.7145768581139423,
+                    "R2": -0.3099018475750577
+                }
+            },
+            "339": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.8890476190476189,
+                    "R2": -0.16357504215851582
+                }
+            },
+            "376": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 1.0666666666666667,
+                    "R2": -0.6379310344827582
+                }
+            },
+            "546": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.6824338624338624,
+                    "R2": -0.20253164556962
+                }
+            },
+            "547": {
+                "best_params": {
+                    "sp": 30
+                },
+                "metrics": {
+                    "SMAPE": 0.9128999603870793,
+                    "R2": 0.11914325166757378
+                }
+            },
+            "555": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.47416316238791395,
+                    "R2": -1.1879447275398247
+                }
+            },
+            "584": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 0.9161904761904762,
+                    "R2": -1.448113207547169
+                }
+            },
+            "586": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 0.3416720372943815,
+                    "R2": -0.8509812442592022
+                }
+            },
+            "587": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.26102828564863867,
+                    "R2": -0.11566169379998859
+                }
+            },
+            "714": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 0.31816872862587914,
+                    "R2": -0.1707683502647015
+                }
+            },
+            "727": {
+                "best_params": {
+                    "sp": 120
+                },
+                "metrics": {
+                    "SMAPE": 1.4919593450028232,
+                    "R2": -0.3221370604147886
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7497947621561117,
+                    "R2": -0.6183378352431649
+                }
+            }
+        },
+        "naive_mean": {
+            "064": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.2,
+                    "R2": -0.09756097560975596
+                }
+            },
+            "065": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.7333333333333333,
+                    "R2": -0.4838709677419355
+                }
+            },
+            "090": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 1.188470902351518,
+                    "R2": -0.22852923306176565
+                }
+            },
+            "252": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.5585216741532404,
+                    "R2": -0.7294295810196871
+                }
+            },
+            "325": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.612046667929021,
+                    "R2": -0.0565819861431871
+                }
+            },
+            "339": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.9308180708180707,
+                    "R2": -0.00012971851083132258
+                }
+            },
+            "376": {
+                "best_params": {
+                    "window_length": 5
+                },
+                "metrics": {
+                    "SMAPE": 0.4,
+                    "R2": -0.20689655172413768
+                }
+            },
+            "546": {
+                "best_params": {
+                    "window_length": 3
+                },
+                "metrics": {
+                    "SMAPE": 0.5707936507936506,
+                    "R2": -0.012658227848101111
+                }
+            },
+            "547": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.9695357980645652,
+                    "R2": -0.0771874114487987
+                }
+            },
+            "555": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.46595291637630726,
+                    "R2": -0.9487673874122025
+                }
+            },
+            "584": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 1.0237037037037036,
+                    "R2": -0.1886792452830186
+                }
+            },
+            "586": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.4100110443152276,
+                    "R2": -0.6222382443283387
+                }
+            },
+            "587": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.26299313499016236,
+                    "R2": -0.034318452549775724
+                }
+            },
+            "714": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.35128103896247087,
+                    "R2": -0.3435398483330947
+                }
+            },
+            "727": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.8236977836977837,
+                    "R2": -0.000901713255185177
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.6334106479659369,
+                    "R2": -0.2687526362846544
+                }
+            }
+        },
+        "naive_drift": {
+            "064": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2,
+                    "R2": -0.09756097560975596
+                }
+            },
+            "065": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.7333333333333333,
+                    "R2": -0.4838709677419355
+                }
+            },
+            "090": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.16676893316339,
+                    "R2": -0.6989901588160421
+                }
+            },
+            "252": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.48527295585089264,
+                    "R2": -0.1615345784957094
+                }
+            },
+            "325": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.6066750795556826,
+                    "R2": -0.07390300230946889
+                }
+            },
+            "339": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.9841269841269842,
+                    "R2": -0.12465948890906708
+                }
+            },
+            "376": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.4,
+                    "R2": -0.20689655172413768
+                }
+            },
+            "546": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.6824338624338624,
+                    "R2": -0.20253164556962
+                }
+            },
+            "547": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.235796791293997,
+                    "R2": -0.6190870286827179
+                }
+            },
+            "555": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.4479308189542195,
+                    "R2": -0.733920947527889
+                }
+            },
+            "584": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.9566666666666667,
+                    "R2": -0.04716981132075437
+                }
+            },
+            "586": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.39289932441393666,
+                    "R2": -0.482385011209987
+                }
+            },
+            "587": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2971112197815636,
+                    "R2": -0.23852742639968216
+                }
+            },
+            "714": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.3687676659093337,
+                    "R2": -0.586063814565746
+                }
+            },
+            "727": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.8902405002405,
+                    "R2": -0.06514878268710578
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.6565349423816241,
+                    "R2": -0.32148334610464124
+                }
+            }
+        },
+        "ema": {
+            "064": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.2,
+                    "R2": -0.09756097560975596
+                }
+            },
+            "065": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.7333333333333333,
+                    "R2": -0.4838709677419355
+                }
+            },
+            "090": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.1391825073241426,
+                    "R2": -0.8409976893840279
+                }
+            },
+            "252": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4925941101184665,
+                    "R2": -0.23573952549217592
+                }
+            },
+            "325": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.6066750795556826,
+                    "R2": -0.07390300230946889
+                }
+            },
+            "339": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.9308180708180707,
+                    "R2": -0.00012971851083132258
+                }
+            },
+            "376": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4,
+                    "R2": -0.20689655172413768
+                }
+            },
+            "546": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.5707936507936506,
+                    "R2": -0.012658227848101111
+                }
+            },
+            "547": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.193318701837966,
+                    "R2": -0.5230131921611665
+                }
+            },
+            "555": {
+                "best_params": {
+                    "damped_trend": false,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4571098050819863,
+                    "R2": -0.8734793187347933
+                }
+            },
+            "584": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.9566666666666667,
+                    "R2": -0.04716981132075437
+                }
+            },
+            "586": {
+                "best_params": {
+                    "damped_trend": false,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4319570409973409,
+                    "R2": -0.7798694308091929
+                }
+            },
+            "587": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.28511730885427583,
+                    "R2": -0.15650348856996987
+                }
+            },
+            "714": {
+                "best_params": {
+                    "damped_trend": false,
+                    "seasonal": "add",
+                    "trend": null
+                },
+                "metrics": {
+                    "SMAPE": 0.36602955025055983,
+                    "R2": -0.6504507082558304
+                }
+            },
+            "727": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.899206349206349,
+                    "R2": -0.1851893597835892
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.6441868116558993,
+                    "R2": -0.3444954645503821
+                }
+            }
+        },
+        "prophet": {
+            "064": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.26666666666666666,
+                    "R2": -0.2804878048780486
+                }
+            },
+            "065": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 1.5777777777777777,
+                    "R2": -1.0
+                }
+            },
+            "090": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 1.1401478012048056,
+                    "R2": -0.6518908466788775
+                }
+            },
+            "252": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.5638505427889823,
+                    "R2": -0.7847046945986877
+                }
+            },
+            "325": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 25,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.5940991885277793,
+                    "R2": 0.014867205542725137
+                }
+            },
+            "339": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 25,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.9027228327228326,
+                    "R2": 0.027111168763782723
+                }
+            },
+            "376": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.6,
+                    "R2": 0.0517241379310347
+                }
+            },
+            "546": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.5423280423280423,
+                    "R2": 0.13502109704641363
+                }
+            },
+            "547": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.8433705726656437,
+                    "R2": 0.3147992389656771
+                }
+            },
+            "555": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 25,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.41101325950475415,
+                    "R2": -0.8266538126061609
+                }
+            },
+            "584": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.9477777777777777,
+                    "R2": -0.07547169811320731
+                }
+            },
+            "586": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.46559176444346606,
+                    "R2": -1.54313622850596
+                }
+            },
+            "587": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.30277935808219436,
+                    "R2": -0.1568438368597196
+                }
+            },
+            "714": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.4140827475664063,
+                    "R2": -1.4327514665903558
+                }
+            },
+            "727": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.8533982959154582,
+                    "R2": -0.11079801623083907
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.6950404418648392,
+                    "R2": -0.42128103712081477
+                }
+            }
+        },
+        "sarima": {
+            "064": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.3333333333333333,
+                    "R2": -0.4634146341463412
+                }
+            },
+            "065": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.333333333333333,
+                    "R2": -0.6129032258064515
+                }
+            },
+            "090": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.1711147637512476,
+                    "R2": -0.753821090616652
+                }
+            },
+            "252": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.5488589634918236,
+                    "R2": -0.5552751135790006
+                }
+            },
+            "325": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6922619927945006,
+                    "R2": -0.6108545034642032
+                }
+            },
+            "339": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.8926455026455026,
+                    "R2": -0.1752497081333504
+                }
+            },
+            "376": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.8666666666666667,
+                    "R2": -0.5086206896551719
+                }
+            },
+            "546": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.5898412698412696,
+                    "R2": 0.0717299578059073
+                }
+            },
+            "547": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.0469072119071638,
+                    "R2": -0.2435624682340134
+                }
+            },
+            "555": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4434965032537785,
+                    "R2": -0.7279529908644358
+                }
+            },
+            "584": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.1344444444444444,
+                    "R2": -0.1179245283018866
+                }
+            },
+            "586": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4213258197167316,
+                    "R2": -0.7863880137087771
+                }
+            },
+            "587": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2726064154801364,
+                    "R2": -0.047251687560269984
+                }
+            },
+            "714": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.35724689194119746,
+                    "R2": -0.5785520103019028
+                }
+            },
+            "727": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.8238054732791575,
+                    "R2": -0.01611812443642946
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7285259057253526,
+                    "R2": -0.4084105887335319
+                }
+            }
+        },
+        "sarimax": {
+            "064": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.4666666666666667,
+                    "R2": -0.8292682926829265
+                }
+            },
+            "065": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.333333333333333,
+                    "R2": -0.6129032258064515
+                }
+            },
+            "090": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.17262802352506,
+                    "R2": -0.6298342949812474
+                }
+            },
+            "252": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6295793052412678,
+                    "R2": -1.1443715295305403
+                }
+            },
+            "325": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.7200753712518417,
+                    "R2": -1.0655311778290995
+                }
+            },
+            "339": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.889047619047619,
+                    "R2": -0.21027370605785434
+                }
+            },
+            "376": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.8666666666666667,
+                    "R2": -0.5086206896551719
+                }
+            },
+            "546": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.5718326118326118,
+                    "R2": 0.12447257383966259
+                }
+            },
+            "547": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.9023493974993048,
+                    "R2": 0.18607109283989054
+                }
+            },
+            "555": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.40092381471230737,
+                    "R2": -0.36666207593077194
+                }
+            },
+            "584": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.9788888888888889,
+                    "R2": -0.1462264150943393
+                }
+            },
+            "586": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.31920435961404514,
+                    "R2": -0.18549319005619802
+                }
+            },
+            "587": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.300634034691121,
+                    "R2": -0.2303590674456859
+                }
+            },
+            "714": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.32830715338753236,
+                    "R2": -0.3070539419087135
+                }
+            },
+            "727": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.8230099530099529,
+                    "R2": 0.0295311091073035
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7135431466245479,
+                    "R2": -0.3931015220794762
+                }
+            }
+        }
+    },
+    "120": {
+        "naive_last": {
+            "064": {
+                "best_params": {
+                    "sp": 120
+                },
+                "metrics": {
+                    "SMAPE": 0.5155555555555555,
+                    "R2": -1.2689844464775843
+                }
+            },
+            "065": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 0.8194444444444444,
+                    "R2": -0.23511604439959632
+                }
+            },
+            "090": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.7646593571466231,
+                    "R2": -0.04370962809681189
+                }
+            },
+            "252": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.44673097852266497,
+                    "R2": -0.47147620846891214
+                }
+            },
+            "325": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 0.8418795686597544,
+                    "R2": -0.17929999444145905
+                }
+            },
+            "339": {
+                "best_params": {
+                    "sp": 30
+                },
+                "metrics": {
+                    "SMAPE": 1.5333333333333334,
+                    "R2": -1.2871172680758787
+                }
+            },
+            "376": {
+                "best_params": {
+                    "sp": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.5333333333333333,
+                    "R2": -0.22388059701492535
+                }
+            },
+            "546": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.7676287601287601,
+                    "R2": -1.0325732899022797
+                }
+            },
+            "547": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 1.504124492812575,
+                    "R2": -0.869294344446558
+                }
+            },
+            "555": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.28633871919932913,
+                    "R2": 0.08259768878628482
+                }
+            },
+            "584": {
+                "best_params": {
+                    "sp": 365
+                },
+                "metrics": {
+                    "SMAPE": 1.0001322751322752,
+                    "R2": -0.42948024683504027
+                }
+            },
+            "586": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.2768421086115846,
+                    "R2": -0.009034736177035985
+                }
+            },
+            "587": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.2496151682151992,
+                    "R2": 0.012729274024810722
+                }
+            },
+            "714": {
+                "best_params": {
+                    "sp": 7
+                },
+                "metrics": {
+                    "SMAPE": 0.2950861912115154,
+                    "R2": -0.2548917809025477
+                }
+            },
+            "727": {
+                "best_params": {
+                    "sp": 120
+                },
+                "metrics": {
+                    "SMAPE": 0.9627774518982959,
+                    "R2": -0.5514252696456086
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7198321158803495,
+                    "R2": -0.45073045947154283
+                }
+            }
+        },
+        "naive_mean": {
+            "064": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.13449222323879217
+                }
+            },
+            "065": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.6833333333333333,
+                    "R2": -0.24722502522704315
+                }
+            },
+            "090": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.8119185993799757,
+                    "R2": -0.13350074741233886
+                }
+            },
+            "252": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.49652095384458317,
+                    "R2": -0.6391963227768467
+                }
+            },
+            "325": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.7227417047463488,
+                    "R2": -0.004539474903188623
+                }
+            },
+            "339": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.8619025419025419,
+                    "R2": -0.003234796010716856
+                }
+            },
+            "376": {
+                "best_params": {
+                    "window_length": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.5333333333333333,
+                    "R2": -0.22388059701492535
+                }
+            },
+            "546": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.6199509803921569,
+                    "R2": -0.01628664495113985
+                }
+            },
+            "547": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.8842576395914231,
+                    "R2": -0.03851024201089026
+                }
+            },
+            "555": {
+                "best_params": {
+                    "window_length": 5
+                },
+                "metrics": {
+                    "SMAPE": 0.2955399175313405,
+                    "R2": -0.03309416687435229
+                }
+            },
+            "584": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 1.0715343915343918,
+                    "R2": -0.05350213117882818
+                }
+            },
+            "586": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.30717059871634284,
+                    "R2": -0.22061315773267132
+                }
+            },
+            "587": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.2567026503940944,
+                    "R2": -0.1282810687169249
+                }
+            },
+            "714": {
+                "best_params": {
+                    "window_length": 10
+                },
+                "metrics": {
+                    "SMAPE": 0.323563023070253,
+                    "R2": -0.41281725830867
+                }
+            },
+            "727": {
+                "best_params": {
+                    "window_length": null
+                },
+                "metrics": {
+                    "SMAPE": 0.8631651287944194,
+                    "R2": -0.06991525423728806
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.6009978753265247,
+                    "R2": -0.15727260737297444
+                }
+            }
+        },
+        "naive_drift": {
+            "064": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.13449222323879217
+                }
+            },
+            "065": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.6833333333333333,
+                    "R2": -0.24722502522704315
+                }
+            },
+            "090": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.9566274279496556,
+                    "R2": -0.016704680504056935
+                }
+            },
+            "252": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.4884396359831128,
+                    "R2": -0.6189466501832377
+                }
+            },
+            "325": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.7473357424595815,
+                    "R2": -0.026773637694317287
+                }
+            },
+            "339": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.5333333333333334,
+                    "R2": -1.2871172680758787
+                }
+            },
+            "376": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.5333333333333333,
+                    "R2": -0.22388059701492535
+                }
+            },
+            "546": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.6805919470393155,
+                    "R2": -0.5587316359768661
+                }
+            },
+            "547": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.2125975079919624,
+                    "R2": -0.6262144084286985
+                }
+            },
+            "555": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.42019119170967534,
+                    "R2": -0.8736309141230636
+                }
+            },
+            "584": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.1022984749455338,
+                    "R2": -0.09548953495769452
+                }
+            },
+            "586": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2804833398197463,
+                    "R2": -0.01710920375257463
+                }
+            },
+            "587": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.25273163102187496,
+                    "R2": -0.10468018153511549
+                }
+            },
+            "714": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 0.2766387588785888,
+                    "R2": -0.04009864305431243
+                }
+            },
+            "727": {
+                "best_params": {},
+                "metrics": {
+                    "SMAPE": 1.5833333333333333,
+                    "R2": -0.9713020030816639
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.735640154964381,
+                    "R2": -0.389493107123216
+                }
+            }
+        },
+        "ema": {
+            "064": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.13449222323879217
+                }
+            },
+            "065": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.6833333333333333,
+                    "R2": -0.24722502522704315
+                }
+            },
+            "090": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.7942032790770562,
+                    "R2": 0.02076462904249321
+                }
+            },
+            "252": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.4760952412805544,
+                    "R2": -0.47426420686948156
+                }
+            },
+            "325": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.7631120006584403,
+                    "R2": -0.05256526653202642
+                }
+            },
+            "339": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.5333333333333334,
+                    "R2": -1.2871172680758787
+                }
+            },
+            "376": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.6472222222222223,
+                    "R2": -0.14179104477611948
+                }
+            },
+            "546": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.7224444074444075,
+                    "R2": -0.900152895034235
+                }
+            },
+            "547": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.2119239241560247,
+                    "R2": -0.6184450051218837
+                }
+            },
+            "555": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.3579588916745514,
+                    "R2": -0.3876464184057611
+                }
+            },
+            "584": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": null,
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.0744281045751634,
+                    "R2": -0.061136204593167376
+                }
+            },
+            "586": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.2754426945095777,
+                    "R2": 0.01799420189362233
+                }
+            },
+            "587": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.24032942412285127,
+                    "R2": 0.03266111572037245
+                }
+            },
+            "714": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 0.307912598090326,
+                    "R2": -0.2815145391350018
+                }
+            },
+            "727": {
+                "best_params": {
+                    "damped_trend": true,
+                    "seasonal": "add",
+                    "trend": "add"
+                },
+                "metrics": {
+                    "SMAPE": 1.4515199615199614,
+                    "R2": -0.7705123266563942
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7215061832887424,
+                    "R2": -0.3523628318006198
+                }
+            }
+        },
+        "prophet": {
+            "064": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.13449222323879217
+                }
+            },
+            "065": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 1.3332010582010583,
+                    "R2": -0.150353178607467
+                }
+            },
+            "090": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": null,
+                    "n_changepoints": 25,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.7847180819637709,
+                    "R2": -0.2961446839450408
+                }
+            },
+            "252": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.6360099419235943,
+                    "R2": -2.8500790544283325
+                }
+            },
+            "325": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 100,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.7249372107653841,
+                    "R2": 0.041262900446536244
+                }
+            },
+            "339": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 25,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 1.5871965996965998,
+                    "R2": -1.0613087930895437
+                }
+            },
+            "376": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 1.2916666666666667,
+                    "R2": -0.22388059701492535
+                }
+            },
+            "546": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.6987292391704156,
+                    "R2": -0.1503024662633783
+                }
+            },
+            "547": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.8283351081148796,
+                    "R2": -0.11716792200081194
+                }
+            },
+            "555": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 5,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.2953316014661266,
+                    "R2": 0.016356887075829274
+                }
+            },
+            "584": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.9962566137566138,
+                    "R2": 0.05910045168267708
+                }
+            },
+            "586": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 100,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.3447670599888716,
+                    "R2": -0.8486425086504006
+                }
+            },
+            "587": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": {
+                        "name": "monthly",
+                        "period": 30.5,
+                        "fourier_order": 5
+                    },
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.32896243842297673,
+                    "R2": -0.5685665270666478
+                }
+            },
+            "714": {
+                "best_params": {
+                    "add_country_holidays": null,
+                    "add_seasonality": null,
+                    "n_changepoints": 10,
+                    "seasonality_mode": "multiplicative"
+                },
+                "metrics": {
+                    "SMAPE": 0.49916987586866635,
+                    "R2": -3.5305776866875638
+                }
+            },
+            "727": {
+                "best_params": {
+                    "add_country_holidays": {
+                        "country_name": "US"
+                    },
+                    "add_seasonality": null,
+                    "n_changepoints": 5,
+                    "seasonality_mode": "additive"
+                },
+                "metrics": {
+                    "SMAPE": 0.8577995684288591,
+                    "R2": -0.032838983050847315
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7660276265178544,
+                    "R2": -0.6565089589892473
+                }
+            }
+        },
+        "sarima": {
+            "064": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.13449222323879217
+                }
+            },
+            "065": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.0435185185185185,
+                    "R2": -0.2048435923309786
+                }
+            },
+            "090": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        2
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.0023366591201999,
+                    "R2": -14.337449158579274
+                }
+            },
+            "252": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6050904027908042,
+                    "R2": -2.104509587412921
+                }
+            },
+            "325": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.9207599217661138,
+                    "R2": -0.2620110800244575
+                }
+            },
+            "339": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.5333333333333334,
+                    "R2": -1.2871172680758787
+                }
+            },
+            "376": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.5833333333333334,
+                    "R2": -0.24626865671641784
+                }
+            },
+            "546": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6348688348688348,
+                    "R2": -0.2252875091404638
+                }
+            },
+            "547": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.6833333333333333,
+                    "R2": -1.2800488448533476
+                }
+            },
+            "555": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2894576073637477,
+                    "R2": 0.009404882143840942
+                }
+            },
+            "584": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        2
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.1838725490196078,
+                    "R2": -0.29588396208410206
+                }
+            },
+            "586": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.33280945844632026,
+                    "R2": -0.5470816730114343
+                }
+            },
+            "587": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.27002533294517955,
+                    "R2": -0.2156440166462279
+                }
+            },
+            "714": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.3747802088276544,
+                    "R2": -1.1533645944481585
+                }
+            },
+            "727": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.530841877420825,
+                    "R2": -0.7796610169491525
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.8181129802947426,
+                    "R2": -1.5376172200911844
+                }
+            }
+        },
+        "sarimax": {
+            "064": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.13449222323879217
+                }
+            },
+            "065": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6833333333333333,
+                    "R2": -0.24722502522704315
+                }
+            },
+            "090": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.1120787840827993,
+                    "R2": -0.9569461621540087
+                }
+            },
+            "252": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6018932114111879,
+                    "R2": -1.9693650333642707
+                }
+            },
+            "325": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.8507099662749819,
+                    "R2": -0.10681662374237999
+                }
+            },
+            "339": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.5042977392977392,
+                    "R2": -1.0946424251113358
+                }
+            },
+            "376": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.6888888888888888,
+                    "R2": -0.22388059701492535
+                }
+            },
+            "546": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.046806816210168,
+                    "R2": -7.492454962441002
+                }
+            },
+            "547": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.5803538537395834,
+                    "R2": -1.087861511891754
+                }
+            },
+            "555": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.3340355720721334,
+                    "R2": -0.12176502223329888
+                }
+            },
+            "584": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.0039915966386554,
+                    "R2": -0.09358101660410956
+                }
+            },
+            "586": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2666488869277711,
+                    "R2": 0.028532066356613206
+                }
+            },
+            "587": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.2710730755833661,
+                    "R2": -0.22575868258128917
+                }
+            },
+            "714": {
+                "best_params": {
+                    "order": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        0,
+                        1,
+                        7,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 0.36432092132131294,
+                    "R2": -0.9833049347184009
+                }
+            },
+            "727": {
+                "best_params": {
+                    "order": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "seasonal_order": [
+                        7,
+                        1,
+                        0,
+                        7
+                    ]
+                },
+                "metrics": {
+                    "SMAPE": 1.6393771043771044,
+                    "R2": -0.9140023112480737
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.8154095388994906,
+                    "R2": -1.0415709643476048
+                }
+            }
+        }
+    }
+}
