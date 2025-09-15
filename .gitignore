@@ -6,6 +6,10 @@
 /final-task/models/prophet/*
 /final-task/models/sarima/*
 /final-task/models/sarimax/*
+/final-task/models/gru/*
+
+# Torch Lightning logs
+/final-task/solution/lightning_logs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

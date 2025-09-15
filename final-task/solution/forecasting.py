@@ -190,6 +190,7 @@ class SalesForecaster:
         exog_cols: list,
         ema: float | None = None,
         zero_target_inputing: bool = False,
+        need_fh_in_fit: bool = False,
     ):
         """
         Custom grid search for forecaster with error skipping.
@@ -225,7 +226,11 @@ class SalesForecaster:
                         y_train = self.apply_ema(y_train, alpha=ema)
 
                     forecaster_clone = local_forecaster.clone()
-                    forecaster_clone.fit(y=y_train, X=X_train)
+
+                    if need_fh_in_fit:
+                        forecaster_clone.fit(y=y_train, X=X_train, fh=np.arange(1, len(y_test) + 1))
+                    else:
+                        forecaster_clone.fit(y=y_train, X=X_train)
 
                     y_pred = forecaster_clone.predict(fh=np.arange(1, len(y_test) + 1), X=X_test)
                     y_pred = self.post_process_predictions(y_pred)
@@ -265,7 +270,11 @@ class SalesForecaster:
             X_last_2_years = last_2_years[exog_cols] if exog_cols else None
 
             best_forecaster = forecaster.set_params(**best_params)
-            best_forecaster.fit(y=y_last_2_years, X=X_last_2_years)
+
+            if need_fh_in_fit:
+                best_forecaster.fit(y=y_last_2_years, X=X_last_2_years, fh=np.arange(1, fh + 1))
+            else:
+                best_forecaster.fit(y=y_last_2_years, X=X_last_2_years)
 
         return (best_params, best_score, all_results), best_forecaster
 

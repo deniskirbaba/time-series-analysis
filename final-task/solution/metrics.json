@@ -1420,6 +1420,195 @@
                     "R2": -0.5255408000477391
                 }
             }
+        },
+        "gru": {
+            "064": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.2857142857142857,
+                    "R2": -0.16666662693023682
+                }
+            },
+            "065": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 1.1428571428571428,
+                    "R2": -1.0416667461395264
+                }
+            },
+            "090": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.44658666745161074,
+                    "R2": 0.011303603649139404
+                }
+            },
+            "252": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.7190419979091595,
+                    "R2": -0.47198593616485596
+                }
+            },
+            "325": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.5181818181818182,
+                    "R2": -0.13953495025634766
+                }
+            },
+            "339": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.8603174603174605,
+                    "R2": -0.0013887882232666016
+                }
+            },
+            "376": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.2857142857142857,
+                    "R2": -0.16666662693023682
+                }
+            },
+            "546": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.45442176870748296,
+                    "R2": -0.5
+                }
+            },
+            "547": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.5239557001076856,
+                    "R2": -0.7484513521194458
+                }
+            },
+            "555": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.38663371099818594,
+                    "R2": -0.9638683795928955
+                }
+            },
+            "584": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.6428571428571429,
+                    "R2": -0.20588231086730957
+                }
+            },
+            "586": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.37922357959201985,
+                    "R2": -1.4955787658691406
+                }
+            },
+            "587": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.17970319930209805,
+                    "R2": -0.22807013988494873
+                }
+            },
+            "714": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.3170996343968033,
+                    "R2": -2.133720874786377
+                }
+            },
+            "727": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.6927437641723355,
+                    "R2": -5.3518524169921875
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.5223368105519679,
+                    "R2": -0.9069353540738424
+                }
+            }
         }
     },
     "30": {
@@ -2837,6 +3026,195 @@
                     "R2": -0.3931015220794762
                 }
             }
+        },
+        "gru": {
+            "064": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.2,
+                    "R2": -0.09756088256835938
+                }
+            },
+            "065": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 1.111111111111111,
+                    "R2": -0.5483870506286621
+                }
+            },
+            "090": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 1.1717241608065312,
+                    "R2": -1.2094838619232178
+                }
+            },
+            "252": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.49777038788994477,
+                    "R2": -0.3856637477874756
+                }
+            },
+            "325": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.6247856810085911,
+                    "R2": -0.09771943092346191
+                }
+            },
+            "339": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.9079319808731572,
+                    "R2": -0.31923723220825195
+                }
+            },
+            "376": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 1.3444444444444443,
+                    "R2": -0.42241382598876953
+                }
+            },
+            "546": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.7204521404521405,
+                    "R2": -1.310126781463623
+                }
+            },
+            "547": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 1.0625959159867437,
+                    "R2": -0.34638333320617676
+                }
+            },
+            "555": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.40400569598208563,
+                    "R2": -0.3675801753997803
+                }
+            },
+            "584": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 1.0344444444444445,
+                    "R2": -0.10377347469329834
+                }
+            },
+            "586": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.3734821854111628,
+                    "R2": -0.4160139560699463
+                }
+            },
+            "587": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.37186232895053467,
+                    "R2": -0.845368504524231
+                }
+            },
+            "714": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.358593041871759,
+                    "R2": -0.5849908590316772
+                }
+            },
+            "727": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.9144300144300144,
+                    "R2": -0.1310868263244629
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7398422355775109,
+                    "R2": -0.47905266284942627
+                }
+            }
         }
     },
     "120": {
@@ -4234,6 +4612,195 @@
                 "metrics": {
                     "SMAPE": 0.8154095388994906,
                     "R2": -1.0415709643476048
+                }
+            }
+        },
+        "gru": {
+            "064": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.2833333333333333,
+                    "R2": -0.1344921588897705
+                }
+            },
+            "065": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 1.419312169312169,
+                    "R2": -0.16246211528778076
+                }
+            },
+            "090": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.8275865977044674,
+                    "R2": -0.5401655435562134
+                }
+            },
+            "252": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.4954416928880372,
+                    "R2": -0.6230552196502686
+                }
+            },
+            "325": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.7261395028026786,
+                    "R2": -0.2669026851654053
+                }
+            },
+            "339": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.8769570026922968,
+                    "R2": -0.4376472234725952
+                }
+            },
+            "376": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.5333333333333333,
+                    "R2": -0.22388064861297607
+                }
+            },
+            "546": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.6152633532045296,
+                    "R2": -0.017882108688354492
+                }
+            },
+            "547": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 1.594839671198367,
+                    "R2": -1.2561988830566406
+                }
+            },
+            "555": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.2824482858236784,
+                    "R2": 0.01675039529800415
+                }
+            },
+            "584": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 1.0591812865497077,
+                    "R2": -0.00578916072845459
+                }
+            },
+            "586": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 2,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 0.31511844454679905,
+                    "R2": -0.31141674518585205
+                }
+            },
+            "587": {
+                "best_params": {
+                    "decoder_hidden_size": 32,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.3626324134003667,
+                    "R2": -1.4700608253479004
+                }
+            },
+            "714": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 64,
+                    "encoder_n_layers": 2
+                },
+                "metrics": {
+                    "SMAPE": 0.31256986881897164,
+                    "R2": -0.36572933197021484
+                }
+            },
+            "727": {
+                "best_params": {
+                    "decoder_hidden_size": 16,
+                    "decoder_layers": 1,
+                    "encoder_hidden_size": 32,
+                    "encoder_n_layers": 1
+                },
+                "metrics": {
+                    "SMAPE": 1.0472801321485532,
+                    "R2": -0.3434131145477295
+                }
+            },
+            "AVERAGE": {
+                "best_params": "",
+                "metrics": {
+                    "SMAPE": 0.7167624725171525,
+                    "R2": -0.4094896912574768
                 }
             }
         }
